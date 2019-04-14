@@ -1195,7 +1195,7 @@ p.sub {
 
 @media(max-width:640px) {
   .text-body p {
-    font-size:10px;
+    font-size:13px;
   }
     .mail_form input[type="submit"] {
         width: 40%;
@@ -1214,7 +1214,7 @@ p.sub {
 
 @media(max-width:600px) {
   .text-body p {
-    font-size:10px;
+    font-size:13px;
   }
     .map iframe {
         width: 100%;
