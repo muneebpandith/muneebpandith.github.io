@@ -1,12 +1,13 @@
 
 
-
 .text-body p{
   font-family: 'Consolas';
   line-height: 1em;
   font-size: 16px;
+  width: 50em;
   color: #0fe10f;
   white-space: nowrap;
+  overflow: hidden;
   -webkit-animation: type 5s steps(40, end);
   animation: type 5s steps(40, end);
 }
@@ -14,7 +15,8 @@
 .text-body p:nth-child(2) {
     line-height: 1em;
     color:white;
-  overflow-wrap: break-word;
+  white-space: nowrap;
+  overflow: hidden;
   margin-top:0px;
   opacity: 0;
   -webkit-animation: type 0s steps(40, end);
@@ -24,7 +26,6 @@
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
-
 
 
 @keyframes type {
