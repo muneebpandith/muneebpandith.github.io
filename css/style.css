@@ -1,10 +1,11 @@
 
 
+
 .text-body p{
   font-family: 'Consolas';
   line-height: 1em;
   font-size: 16px;
-  width: 50em;
+  width: 520px;
   color: #0fe10f;
   white-space: nowrap;
   overflow: hidden;
@@ -28,6 +29,7 @@
 }
 
 
+
 @keyframes type {
   from {
     width: 0;
@@ -36,7 +38,6 @@
 
 @-webkit-keyframes type {
   from {
-    
     width: 0;
   }
 }
@@ -1193,6 +1194,9 @@ p.sub {
 }
 
 @media(max-width:640px) {
+  .text-body p {
+    font-size:10px;
+  }
     .mail_form input[type="submit"] {
         width: 40%;
     }
@@ -1209,6 +1213,9 @@ p.sub {
 }
 
 @media(max-width:600px) {
+  .text-body p {
+    font-size:10px;
+  }
     .map iframe {
         width: 100%;
         min-height: 250px;
