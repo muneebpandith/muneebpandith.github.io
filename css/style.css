@@ -603,7 +603,7 @@ div#carouselExampleControls .carousel-item{background:none;height:auto;}
 a.carousel-control-next.test,
 a.carousel-control-prev.test{color:#0e0f10;text-align:center;opacity:0.9;font-size:1em;width:32px;height:32px;border:1px solid #ddd;margin-top:3em;}
 .whatIdoWhenIamFree_grid-inn img{width:15%;}
-.contact{background:url(../images/contact.jpg) no-repeat 0px 0px;background-size:cover;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;-ms-background-size:cover;height:10vw;}
+.contact{background:url(../images/contact.jpg) no-repeat 0px 0px;height:auto;}
 .address-right p{color:#e8e7e7;.contact_h3
 line-height:0.8em;}
 .address-right h6{color:#fff;text-transform:uppercase;font-weight:400;font-size:0.9em;letter-spacing:2px;}
