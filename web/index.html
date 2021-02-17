@@ -51,8 +51,12 @@
 		}
 		.row{
 			width:90%;  float:right;
+			height:475px;
 			
 			
+		}
+		.col{
+			display: table-cell;
 		}
 		#header #col1{
 			position:relative;
@@ -91,6 +95,7 @@
 		{
 			width:100%;
 			background-color: #fff;
+			height: 100%;
 			
 
 		}
@@ -192,8 +197,37 @@
 		.mobileviedisable{
 			display:block;
 		}
-		
+		@media only screen and (max-width: 1200px) and (min-width:701px)
+		{
+			#col2{
+				width:90%;
 
+			}
+			#col2 h1{
+			width:90%;
+			font:normal normal bold 25px Questrial,sans-serif;
+			}
+			#col2 h6{
+				width:90%;
+			font:normal normal bold 18px AvenirLTProLight,sans-serif;
+			}
+			#col2 p{
+			font:normal normal normal 16px AvenirLTProLight,sans-serif;
+			width:90%;
+			line-height: 1.4em;
+
+			}
+			#col2{
+				height:410px;
+			}
+			.row{
+				display: flex;
+			}
+			#headerbuttons{
+				width:80%;
+				 
+			}
+		}
 		@media only screen and (max-width: 700px){
 			.mobileviewenable{
 				display: block;
@@ -210,6 +244,7 @@
 			.row{
 				clear:both;
 				width:100%;
+				height:auto;
 				margin:0 auto; 
 			}
 			#header #col1{
@@ -312,7 +347,7 @@
 	    <div id="col2" class="col">
 	        <h1 style="">Muneeb Ahmed</h1>
 	        <h6 style="">Ph.D. Scholar and Junior Research Fellow at the Indian Institute of Technology, Delhi.</h6>
-	        <p style="border-top:2px solid rgba(128,167,255,1); width:50px; position:relative;margin:10px 30% 0 30%; " class="mobileviewdisable"></p>
+	        <p  style="border-top:2px solid rgba(128,167,255,1); width:50px; position:relative;margin:10px 30% 0 30%;" class="mobileviewdisable"></p>
 	       	<img src="email.webp" style="" class="mobileviewenable"/>
 	        <div id="headerbuttons" style="margin-bottom:26px; margin-top:0px;" class="mobileviewenable">
 	        	<a href=""><div style="font-family:AvenirLTProLight;font-weight:bold; background-color:rgba(0,80,255,1); color:white;">CV/RESUME</div></a>
