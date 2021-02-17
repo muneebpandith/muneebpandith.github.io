@@ -1,0 +1,134 @@
+
+<style>
+.filterDiv {
+  background-color: #ffffff;
+  color: #000000;
+  margin: 2px;
+  display: none;
+  width:90%;
+  margin:0 auto;
+   box-shadow:-11px 11px 17px 10px rgb(138 131 124 / 23%);
+    border: 1px solid #79b2ec;
+    border-radius:10px;
+   
+}
+
+.show {
+  display: flex;
+}
+
+
+.projectscontainer {
+  
+  overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  font-family: 'AvenirLTProLight',sans-serif;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+
+#prentry
+{
+    
+}
+
+#column1{
+  float:left; width:15%;vertical-align: middle; text-align: center;
+}
+#column2
+  {
+    float:right;width:75%;
+    padding:10px;
+}
+.filterDiv:hover{
+    opacity:0.75;
+    box-shadow:-11px 11px 17px 0px rgb(138 131 124 / 50%);
+}
+</style>
+
+<h2 style="font-family: 'AvenirLTProLight',sans-serif;"> Projects </h2>
+
+<div id="myBtnContainer" style="margin-bottom:20px;">
+  <i>Tags: &nbsp</i><button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('mlcv')"> Machine Learning (Computer Vision)</button>
+  <button class="btn" onclick="filterSelection('nlp')">Machine Learning (NLP)</button>
+  <button class="btn" onclick="filterSelection('ns')"> Networks and Cryptography</button>
+  <button class="btn" onclick="filterSelection('dmsc')"> Data Mining and Soft Computing</button>
+  <button class="btn" onclick="filterSelection('dmsc')"> Development</button>
+</div>
+<a id="projects"></a>
+<div class="projectscontainer">
+  <div class= "filterDiv ml" style="padding:2px;">
+    <div id="column1" style="background:url('heyitsme.jpg') no-repeat;background-position: center; background-size: contain;"></div>
+    <div id="column2" style="">
+        <h3>Machine Learning based STEM</h3>
+        <p>This contains sdbsh sdjh sdjh dsh sdfuvsd sduvfsdu fsduf sdugf ugf sdugf sdug fsdugf sdugf sduf sdu fsduf sdf sdugf ugf sdu fdsug fsdgf d ugf sdu fdsug fsdgf d  ugf sdu fdsug fsdgf d  ugf sdu fdsug fsdgf d ugf sdu fdsug fsdgf d  ugf sdu fdsug fsdgf d  ugf sdu fdsug fsdgf d  ugf sdu fdsug fsdgf d sdu fdsug fsdgf d fgd fg dfg df df dgf d fgd fsd fusdgf sd fsdugf sdugf dsu</p>
+         <a href=""><button>Link</button></a>
+    </div>
+  </div>
+</div>
+
+
+
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterDiv");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
