@@ -382,7 +382,7 @@
 	<br>
 	<br>
 	<div id="container" style="display:block; position:relative; width:90%; margin:0 auto;">
-	
+		 
 <style>
 .filterDiv {
   background-color: #ffffff;
@@ -391,14 +391,16 @@
   display: none;
   width:90%;
   margin:0 auto;
-   box-shadow:-11px 11px 17px 0px rgb(138 131 124 / 23%);
+   box-shadow:-11px 11px 17px 10px rgb(138 131 124 / 23%);
     border: 1px solid #79b2ec;
     border-radius:10px;
+   
 }
 
 .show {
-  display: block;
+  display: flex;
 }
+
 
 .projectscontainer {
   
@@ -448,27 +450,41 @@
 
 <h2 style="font-family: 'AvenirLTProLight',sans-serif;"> Projects </h2>
 
-<div id="myBtnContainer" style="margin-bottom:20px;">
-  <i>Tags: &nbsp</i><button class="btn active" onclick="filterSelection('all')"> Show all</button>
-  <button class="btn" onclick="filterSelection('mlcv')"> Machine Learning (Computer Vision)</button>
-  <button class="btn" onclick="filterSelection('nlp')">Machine Learning (NLP)</button>
-  <button class="btn" onclick="filterSelection('ns')"> Networks and Cryptography</button>
-  <button class="btn" onclick="filterSelection('dmsc')"> Data Mining and Soft Computing</button>
-  <button class="btn" onclick="filterSelection('dmsc')"> Development</button>
+<div id="myBtnContainer" style="margin-bottom:20px;position:relative;float:right;right:60px;">
+  <i>Tags: &nbsp</i>
+   <select style="width:100px;background-color: #b0b9cf;" onchange="selectchange()" id="selectfilter">
+  	<option onchange="filterSelection('all')" value="all" class="btn">ALL</option>
+  	<option onchange="filterSelection('mlcv')" value="mlcv" class="btn">Machine Learning (Computer Vision)</option>
+  	<option onchange="filterSelection('nlp')" value="nlp" class="btn">Machine Learning (NLP)</option>
+  	<option onchange="filterSelection('nls')" value="nls" class="btn">Networks and Cryptography</option>
+  	<option onchange="filterSelection('dmsc')" value="dmsc" class="btn">Data Mining and Soft Computing</option>
+  	<option onchange="filterSelection('dev')" value="dev" class="btn">Development</option>
+  	
+  </select>
 </div>
+
 <a id="projects"></a>
 <div class="projectscontainer">
-  <div class= "filterDiv ml" style="display: flex; padding:2px;">
+  <div class= "filterDiv mlcv" style="padding:2px;">
     <div id="column1" style="background:url('heyitsme.jpg') no-repeat;background-position: center; background-size: contain;"></div>
     <div id="column2" style="">
-        <h3>Machine Learning based STEM</h3>
-        <p>This contains sdbsh sdjh sdjh dsh sdfuvsd sduvfsdu fsduf sdugf ugf sdugf sdug fsdugf sdugf sduf sdu fsduf sdf sdugf ugf sdu fdsug fsdgf d ugf sdu fdsug fsdgf d  ugf sdu fdsug fsdgf d  ugf sdu fdsug fsdgf d ugf sdu fdsug fsdgf d  ugf sdu fdsug fsdgf d  ugf sdu fdsug fsdgf d  ugf sdu fdsug fsdgf d sdu fdsug fsdgf d fgd fg dfg df df dgf d fgd fsd fusdgf sd fsdugf sdugf dsu</p>
+        <h3 style="font-family:'AvenirLTProLight';">Machine Learning based STEM</h3>
+        <p style="font-family:'AvenirLTProLight';">This contains sdbsh sdjh sdjh dsh sdfuvsd sduvfsdu fsduf sdugf ugf sdugf sdug fsdugf sdugf sduf sdu fsduf sdf sdugf ugf sdu fdsug fsdgf d ugf sdu fdsug fsdgf d  ugf sdu fdsug fsdgf d  ugf sdu fdsug fsdgf d ugf sdu fdsug fsdgf d  ugf sdu fdsug fsdgf d  ugf sdu fdsug fsdgf d  ugf sdu fdsug fsdgf d sdu fdsug fsdgf d fgd fg dfg df df dgf d fgd fsd fusdgf sd fsdugf sdugf dsu</p>
          <a href=""><button>Link</button></a>
     </div>
   </div>
 </div>
 
-
+<div class="projectscontainer">
+  <div class= "filterDiv nlp" style="padding:2px;">
+    <div id="column1" style="background:url('heyitsme.jpg') no-repeat;background-position: center; background-size: contain;"></div>
+    <div id="column2" style="">
+        <h3 style="font-family:'AvenirLTProLight';">Machine Learning based STEM</h3>
+        <p style="font-family:'AvenirLTProLight';">This contains sdbsh sdjh sdjh dsh sdfuvsd sduvfsdu fsduf sdugf ugf sdugf sdug fsdugf sdugf sduf sdu fsduf sdf sdugf ugf sdu fdsug fsdgf d ugf sdu fdsug fsdgf d  ugf sdu fdsug fsdgf d  ugf sdu fdsug fsdgf d ugf sdu fdsug fsdgf d  ugf sdu fdsug fsdgf d  ugf sdu fdsug fsdgf d  ugf sdu fdsug fsdgf d sdu fdsug fsdgf d fgd fg dfg df df dgf d fgd fsd fusdgf sd fsdugf sdugf dsu</p>
+         <a href=""><button>Link</button></a>
+    </div>
+  </div>
+</div>
 
 <script>
 filterSelection("all")
@@ -504,7 +520,7 @@ function w3RemoveClass(element, name) {
 }
 
 // Add active class to the current button (highlight it)
-var btnContainer = document.getElementById("myBtnContainer");
+/*var btnContainer = document.getElementById("myBtnContainer");
 var btns = btnContainer.getElementsByClassName("btn");
 for (var i = 0; i < btns.length; i++) {
   btns[i].addEventListener("click", function(){
@@ -512,7 +528,16 @@ for (var i = 0; i < btns.length; i++) {
     current[0].className = current[0].className.replace(" active", "");
     this.className += " active";
   });
+}*/
+
+function selectchange()
+{
+  var x = document.getElementById("selectfilter").value;
+  filterSelection(x);
 }
+
+
+
 </script>
 
 
