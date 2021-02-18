@@ -1,524 +1,593 @@
 <!DOCTYPE html>
+<html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Muneeb Ahmed</title>
-
+<title>Muneeb Ahmed</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
-	<link href="./css/main.css" rel="stylesheet">
-	<link rel="stylesheet" href="./css/bootstrap.css">
-    <link rel="stylesheet" href="./css/style.css" type="text/css" media="all">
-    <link rel="stylesheet" href="./css/fontawesome-all.css">
-    
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="aos.css" />
+	<style>
+		html {
+  		scroll-behavior: smooth;
+  		cursor:pointer;
+		}
+		@font-face {
+     		font-family: 'AvenirLTProLight';
+  			src: url('AvenirLTProLight.woff');
+			}
+		@font-face {
+     		font-family: 'Questrial';
+  			src: url('Questrial-Regular.ttf');
+			}
 
+		#nav{
+			width:100%;
+			height:60px;
+			background-color:#fff;
+			position: relative;
 
+		}
+
+		#nav ul{
+			position:relative;
+			float:right;
+			padding:10px;
+		}
+
+		#nav ul li{
+			display: inline;
+			padding-left:30px;
+			font:normal normal 20px/1.4em avenir-lt-w01_35-light1475496,sans-serif;
+		}
+		#nav ul li a{
+			text-decoration: none;
+			color:#000;
+		}
+		#nav ul li a:hover{
+			color:rgb(176,176,176);
+		}
+		#clear
+		{
+			clear:both;
+		}
+
+		#header{
+			display: block;
+			overflow:hidden;
+			background-color:rgba(230,218,206,1);
+		
+		}
+		.row{
+			width:90%;  float:right;
+			height:475px;
+			
+			
+		}
+		.col{
+			display: table-cell;
+		}
+		#header #col1{
+			position:relative;
+			width:25%;
+
+			margin:0 auto;
+			float:left;
+			background:rgba(244,236,230,1);
+			box-shadow: -11px 11px 17px 0px rgba(138,131,124,0.23);
+			border-radius:0 5px;
+			text-align:center;
+		}
+		#header #col2{
+			position:relative;
+			width:75%;
+			margin:0 auto;
+			box-shadow: -11px 11px 17px 0px rgba(138,131,124,0.23);
+			float:left;
+			padding-top:60px;
+			background-color:rgba(255,255,255,1);
+			vertical-align: center;
+			height: auto;
+
+		}
+		
+		
+		#header #col1 #pp img{
+			width:90%;
+			box-shadow: rgba(0,0,0,0.6);
+
+		}
+		#header #col1 #pp {
+			
+		}
+		#below-pp
+		{
+			width:100%;
+			background-color: #fff;
+			height: 100%;
+			
+
+		}
+		#pp{
+			padding:30px;
+			padding-top:70px; 
+			position:relative;
+			width:70%;
+			margin:0 auto;
+		}
+		img#imgpp{
+			background: no-repeat;
+			border-radius:50%; 
+			position:relative; 
+			margin: 0 auto;
+		}
+		#emaildiv{
+			width:90%;
+			position:relative;
+			margin:10px auto; 
+			padding-top:30px; 
+			padding-bottom:30px;
+		}
+		#emaildiv img{
+			width:90%;
+		}
+		#linksdiv{
+			width:100%;
+			
+			padding-bottom:30px;
+			text-align:center;
+		}
+
+		#linksdiv a{
+			display: inline;
+			padding-left:10px;
+
+		}
+		#linksdiv a:hover{
+			opacity:0.7;
+		
+		}
+		#col2 h1{
+			font:normal normal bold 60px Questrial,sans-serif;
+			padding:20px 30px 10px 30px;
+			margin-block-start: 0em;
+   			margin-block-end: 0em;
+   			width:65%;
+		}
+		#col2 h6{
+			font:normal normal bold 25px AvenirLTProLight,sans-serif;
+
+			padding:10px 30px 10px 30px;
+			margin-block-start: 0em;
+   			margin-block-end: 0em;
+   			width:60%;
+
+		}
+		#col2 p{
+			font:normal normal normal 17px AvenirLTProLight,sans-serif;
+			padding:5px 30px 5px 30px;
+			margin-block-start: 0em;
+   			margin-block-end: 0em;
+   			text-align: justify;
+   			width:75%;
+   			line-height: 1.45em;
+		}
+
+		#headerbuttons{
+			width:65%; position:relative;margin:0 auto;
+			padding: 6px;
+		}
+		#headerbuttons a div{
+		width:150px;
+		border-radius: 100px 100px 100px 100px;
+	    text-decoration:none;
+	    color: rgba(0,0,0,1);
+	    background-color: rgba(0,0,0,1);
+		text-align: center;
+		display:inline-block; 
+		height:35px;
+		vertical-align: center;
+		text-align: center;
+	    margin-left:20px;
+	    margin-top:10px;
+	    font-size:20px;
+	    padding-top:10px;
+
+		}
+		#headerbuttons a div:hover{
+			transition: color 0.4s ease 0s;
+	    
+		opacity:0.8;
+
+		}
+		.mobileviewenable{
+			display:none;
+		}
+		.mobileviedisable{
+			display:block;
+		}
+		@media only screen and (max-width: 1300px) and (min-width:701px)
+		{
+			#col2{
+				width:90%;
+
+			}
+			#col2 h1{
+			width:90%;
+			font:normal normal bold 25px Questrial,sans-serif;
+			}
+			#col2 h6{
+				width:85%;
+			font:normal normal bold 18px AvenirLTProLight,sans-serif;
+			}
+			#col2 p{
+			font:normal normal normal 16px AvenirLTProLight,sans-serif;
+			width:85%;
+			line-height: 1.4em;
+
+			}
+			#col2{
+				height:410px;
+			}
+			.row{
+				display: flex;
+			}
+			#headerbuttons{
+				width:80%;
+				 
+			}
+		}
+		@media only screen and (max-width: 700px){
+			.mobileviewenable{
+				display: block;
+			}
+			.mobileviewdisable{
+				display: none;
+			}
+
+			.col{
+				clear:both;
+				width:90%;
+
+			}
+			.row{
+				clear:both;
+				width:100%;
+				height:auto;
+				margin:0 auto; 
+			}
+			#header #col1{
+			
+			width:100%;
+			position:relative;
+			margin:0 auto;
+			background:rgba(244,236,230,1);
+			box-shadow: -11px 11px 17px 0px rgba(138,131,124,0.23);
+			border-radius:0 5px;
+			text-align:center;
+			margin-bottom:0px;
+		}
+		#header #col2{
+			
+			width:100%;
+			position:relative;
+			margin:0 auto;
+			background:rgba(255,255,255,1);
+			box-shadow: -11px 11px 17px 0px rgba(138,131,124,0.23);
+			border-radius:0 5px;
+			text-align:center;
+			padding-top:10px;
+		}
+
+		#col2 h1{
+			font:normal normal bold 35px Questrial,sans-serif;
+			padding:20px 0px 10px 20px;
+   			width:90%;
+   			text-align: center;
+		}
+		#col2 h6{
+			font:normal normal bold 17px AvenirLTProLight,sans-serif;
+
+			padding:0px 10px 0px 10px;
+			margin-block-start: 0em;
+   			margin-block-end: 0em;
+   			width:90%;
+   			text-align: center;
+
+		}
+		#col2 img{
+			text-align: center;
+			margin:0 auto;
+		}
+		#col2 p{
+			font:normal normal normal 17px AvenirLTProLight,sans-serif;
+			padding:5px 10px 5px 15px;
+			margin-block-start: 0em;
+   			margin-block-end: 0em;
+   			text-align: justify;
+   			width:90%;
+   			line-height: 1.4em;
+		}
+
+		#headerbuttons{
+			width:95%; position:relative;margin:0 auto;
+		}
+		#headerbuttons a div{
+			margin-top:10px;
+			margin-left:0px;
+		}
+		
+		#clearondemand{
+			clear:both;
+			display:block;
+		}
+		}
+	</style>
 </head>
 
-<body data-aos-easing="ease-out-back" data-aos-duration="1000" data-aos-delay="0">
-    <!-- hea-content -->
-    <header class="index-banner" id="home">
-        <!-- nav -->
-        <nav class="main-header">
-            <div id="brand">
-                <div id="logo">
-                    <a>
-                        <img src="./logo.png" style="width:100px;" />
-                    </a>
-                </div>
-                <div id="word-mark">
-                    <h4>
-                        <a href="index.html"></a>
-                    </h4>
-                </div>
-            </div>
-            <div id="menu">
-                <div id="menu-toggle">
-                    <div id="menu-icon">
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                    </div>
-                </div>
-                <ul class="text-center nav-honey" style="top: 50px; ">
-                    <li>
-                        <a href="index.html" class="active " style="font-family:'Consolas'; text-transform:none;" >main();</a>
-                    </li>
-                    <li>
-                        <a class="scroll" href="#about" style="font-family:'Consolas'; text-transform:none;">About();</a>
-                    </li>
-                    <li>
-                        <a class="scroll" href="#research_projects"  style="font-family:'Consolas'; text-transform:none;">Projects();</a>
-                    </li>
-                    
-                    <li>
-                        <a class="scroll" href="#contact" style="font-family:'Consolas'; text-transform:none;">Contact();</a>
-                    </li>
-                   
-                </ul>
-            </div>
-            <div class="clearfix"></div>
-        </nav>
-        <!-- //nav -->
-       
-        <div class="header" id=""  style="background: url('images/header-bg.jpg') top center no-repeat fixed;" ">
-            <div class="snow-container">
-                  <div class="snow foreground"></div>
-                  <div class="snow foreground layered"></div>
-                  <div class="snow middleground"></div>
-                  <div class="snow middleground layered"></div>
-                  <div class="snow background"></div>
-                  <div class="snow background layered"></div>
-            </div>
-      <div class="head-wrap shift-text">
-        <h1 class="h1"><img src="heyitsme.jpg" style="width:150px; border-radius:50%;z-index:999"/></h1>
-        <div class="text-editor-wrap">
-            <div class="title-bar"><span class="title">Muneeb Ahmed<span class="terminal-height"></span></span></div>
-            <div class="text-body">
-               <p class="console-text">$ echo "Hey, I am Muneeb" && cat description.txt</p>
-               <p class="console-text">Hey, I am Muneeb. <br>Yes, the one on the technical side. </p>
-              
-            </div>
-        </div>
-        <span class="tagline">
-        	 <a href="Muneeb_CV.pdf" target="_blank"><button id="downloadcv" style="width:100px; background-color:orange;border: 1px solid orange; border-radius:2px;padding:10px; width:150px;cursor:pointer;">My CV / Resumé</button></a></span>
-    </div>
+<body>
+	<div id="nav" style="">
+		<ul>
+			<li><a href="#header">Bio</a></li>
+			<li ><a href="#projects">Projects/Research</a></li>
+			<li ><a href="#pub">Research</a></li>
+
+		</ul>
+	</div>
+	<div id="clear"></div>
+	<div id="header">
+		<div class="row" style=" ">
+	    
+	    <div id="col1" class="col">
+	        <div id="pp" style="">
+	        	<img id="imgpp" src="heyitsme.jpg" style=""/>
+	        </div>
+	        <div id="below-pp" style="" class="mobileviewdisable">
+	        	<div id="emaildiv"> <img src="email.webp" style="" /></div>
+	        	<div id="linksdiv" style="">
+	        			<a href="https://github.com/muneebpandith" target="new"> <img src="git.webp"></a> 
+	        			<a href="https://scholar.google.com/citations?user=ke3K1PoAAAAJ&hl=en" target="new"> <img src="google.webp"></a>
+	        			<a href="https://www.linkedin.com/in/muneebpandith/" target="new"> <img src="linkedin.webp"></a>
+	        			
+
+	        	</div>
+	        </div>
+	        
+	    </div>
+
+
+
+	    <div id="clearondemand" style="display:none;"></div>
+	    <div id="col2" class="col">
+	        <h1 style="">Muneeb Ahmed</h1>
+	        <h6 style="">Ph.D. Scholar and Junior Research Fellow at the Indian Institute of Technology, Delhi.</h6>
+	        <p  style="border-top:2px solid rgba(128,167,255,1); width:50px; position:relative;margin:10px 30% 0 30%;" class="mobileviewdisable"></p>
+	       	<img src="email.webp" style="" class="mobileviewenable"/>
+	        <div id="headerbuttons" style="margin-bottom:26px; margin-top:0px;" class="mobileviewenable">
+	        	<a href="https://muneebpandith.github.io/Muneeb_CV.pdf"><div style="font-family:AvenirLTProLight;font-weight:bold; background-color:rgba(0,80,255,1); color:white;">CV/RESUME</div></a>
+	        	<a href="#projects"><div style="font-family:AvenirLTProLight;font-weight:bold;background-color:rgba(232,183,58,1);color:black;">PROJECTS</div></a>
+	        </div>
+	        <p style="">I am an ML enthusiast per se having interests in theoretical and applied deep learning for real-world problems among which I find vision-related machine learning quite fascinating. Very recently, my inclination towards collaborative robotics at the TIH Cobotics Laboratory (IITD) has turned me in to explore reinforcement learning on haptics signals. Previously I have demonstrated project work in natural languages, data generation, cryptography and in applied-mathematics besides development.</p>
+
+	        <div id="headerbuttons" style="margin-bottom:26px; margin-top:0px;" class="mobileviewdisable" >
+	        	<a href="https://muneebpandith.github.io/Muneeb_CV.pdf"><div style="font-family:AvenirLTProLight;font-weight:bold; background-color:rgba(0,80,255,1); color:white;">CV/RESUME</div></a>
+	        	<a href="#projects"><div style="font-family:AvenirLTProLight;font-weight:bold;background-color:rgba(232,183,58,1);color:black;">PROJECTS</div></a>
+	        </div>
+
+	        <div id="mobileview" style="" class="mobileviewenable">
+	        	<p style="border-top:2px solid rgba(128,167,255,1); width:50px; position:relative;margin:10px auto; "></p>
+		        <div id="linksdiv2" style="width:150px;position:relative;margin:5px auto;;">
+		        		<a href="https://github.com/muneebpandith" target="new"> <img src="git.webp"></a> 
+	        			<a href="https://scholar.google.com/citations?user=ke3K1PoAAAAJ&hl=en" target="new"> <img src="google.webp"></a>
+	        			<a href="https://www.linkedin.com/in/muneebpandith/" target="new"> <img src="linkedin.webp"></a>
+		        			
+
+		        </div>
+	    	</div>
+	    </div>
+	    <div id="clear"></div>
+		</div>
+	</div>
+
+	<br>
+	<br>
+	<div id="container" style="display:block; position:relative; width:90%; margin:0 auto;">
+		 
+<style>
+.filterDiv {
+  background-color: #ffffff;
+  color: #000000;
+  margin: 2px;
+  display: none;
+  width:90%;
+  margin:0 auto;
+   box-shadow:-11px 11px 17px 10px rgb(138 131 124 / 23%);
+    border: 1px solid #79b2ec;
+    border-radius:10px;
+   
+}
+
+.show {
+  display: flex;
+}
+
+
+.projectscontainer {
   
+  
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  font-family: 'AvenirLTProLight',sans-serif;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+
+#prentry
+{
+    
+}
+
+#column1{
+  float:left; width:15%;vertical-align: middle; text-align: center;
+}
+#column2
+  {
+    float:right;width:95%;
+    padding:10px;
+}
+.filterDiv:hover{
+    
+    box-shadow:-11px 11px 17px 0px rgb(138 131 124 / 50%);
+}
+
+</style>
+
+<h2 style="font-family: 'AvenirLTProLight',sans-serif;padding-left:60px;"> Projects | Research </h2>
+
+<div id="myBtnContainer" style="margin-bottom:20px;position:relative;float:right;right:60px;">
+  <i>Tags: &nbsp</i>
+   <select style="width:100px;background-color: #b0b9cf;" onchange="selectchange()" id="selectfilter">
+  	<option onchange="filterSelection('all')" value="all" class="btn">ALL</option>
+  	<option onchange="filterSelection('mlcv')" value="mlcv" class="btn">Machine Learning (Computer Vision)</option>
+  	<option onchange="filterSelection('nlp')" value="nlp" class="btn">Machine Learning (NLP)</option>
+  	<option onchange="filterSelection('nls')" value="nls" class="btn">Networks and Cryptography</option>
+  	<option onchange="filterSelection('dmsc')" value="dmsc" class="btn">Data Mining and Soft Computing</option>
+  	<option onchange="filterSelection('dev')" value="dev" class="btn">Development</option>
+  	
+  </select>
 </div>
-      
-    </header>
-    
-    
-    <section class="banner-bottom-wthree py-lg-5 py-md-5 py-4" id="about">
-        <div class="container">
-            <div class="well well-lg">
-            <div class="inner-sec-w3ls py-lg-5 py-4">
-                <div class="info-about text-center">
-                    <h4 class="sub-tittle-w3">About Me</h4>
-                    <h3 class="tittle-w3 text-uppercase mb-lg-5 mb-3">SKILLS</h3>
-                    <div class="row mt-lg-5 mt-3">
-                        <div class="col-lg-4 progress-info-content text-left">
-                            <div class="progress-one my-lg-5 aos-init aos-animate" data-aos="fade-up">
-                                <h4 class="progress-tittle-w3">Python</h4>
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 65%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                            <div class="progress-one aos-init aos-animate" data-aos="fade-up">
-                                <h4 class="progress-tittle-w3">C++</h4>
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 80%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
 
-                        </div>
-                        <div class="col-lg-4 progress-info-content text-left">
-                            <div class="progress-one my-lg-5 aos-init aos-animate" data-aos="fade-up">
-                                <h4 class="progress-tittle-w3">PHP</h4>
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 90%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                            <div class="progress-one aos-init aos-animate" data-aos="fade-up">
-                                <h4 class="progress-tittle-w3">C</h4>
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 80%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 progress-info-content text-left">
-                            <div class="progress-one my-lg-5 aos-init aos-animate" data-aos="fade-up">
-                                <h4 class="progress-tittle-w3">Front-end UI/UX</h4>
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-striped bg-secondary" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                            <div class="progress-one aos-init aos-animate" data-aos="fade-up">
-                                <h4 class="progress-tittle-w3">
-                                    Linux Admininistration</h4>
-                                <div class="progress">
-
-                                    <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 60%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-
-                                </div>
-                            </div>
-
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </div>
-    </section>
-
-    
-    
-    <section class="research_projects py-md-5 py-4" id="research_projects">
-        <div class="container">
-            <div class="inner-sec-w3ls py-md-5 py-4">
-                <h4 class="sub-tittle-w3 text-uppercase text-center">My Projects</h4>
-                <h3 class="tittle-w3 text-uppercase mb-lg-5 mb-3 text-center text-white">Research Work and Software</h3>
-                
-                        <div class="tab-content" id="pills-tabContent">
-                            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-                                <div class="menu-grids mt-4">
-                                    <div class="row t-in">
-                                        <div class="col-lg-4 service-in text-center aos-init" data-aos="flip-up">
-                                            <div class="card">
-                                                <div class="card-body">
-                                                    <i class="fas fa-list-ul mb-4"></i>
-                                                    <h5 class="card-title text-uppercase">Machine Learning</h5>
-                                                    <p class="card-text">Deep-learning based Gender Classification using builtin webcams and the effect of lighting conditions <br>
-                                                    	<a href="https://muneebpandith.github.io/SubmissionId4468_Gender_Classification_DeepLearning_paper.pdf" targe="_blank" style="color:yellow">Link to the paper</a></p>
-                                          </div>
-                                            </div>
-
-                                        </div>
-                                        <div class="col-lg-4 service-in text-center aos-init" data-aos="flip-up">
-                                            <div class="card">
-                                                <div class="card-body">
-                                                    <i class="fa fa-laptop mb-4"></i>
-                                                    <h5 class="card-title text-uppercase">Crytpography</h5>
-                                                    <p class="card-text">Customized Digital Signature featured on RSA Encryption/Decryption and MD5 Digest <br><a href="https://github.com/muneebpandith/Digital-Signature" target="_blank" style="color:yellow">Link to the repository</a></p>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                        <div class="col-lg-4 service-in text-center aos-init" data-aos="flip-up">
-                                            <div class="card">
-                                                <div class="card-body">
-                                                    <i class="far fa-clone mb-4"></i>
-                                                    <h5 class="card-title text-uppercase">Computing</h5>
-                                                    <p class="card-text">Contributed to the Algorithm design for determination of Prime Numbers on Parallel Processors (CUDA)<br> <a href="https://github.com/muneebpandith/GPU610" target="_blank" style="color:yellow">Link to the repository</a></p>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-    
-    <!-- /experience -->
-    <section class="experience py-lg-5 py-4" id="experience">
-        <div class="timeline py-lg-5 py-3">
-            
-            <div id="my-timeline" class="roadmap roadmap--initialized"><ol class="roadmap__events"><li class="roadmap__events__event" style="left: 0%;">
-
-            </div>
-        </div>
-
-    </section>
-    
-    <!-- /whatIdoWhenIamFree -->
-    <div class="whatIdoWhenIamFree py-lg-5 py-4" id="clients">
-        <div class="whatIdoWhenIamFree-inner container py-lg-4 py-3">
-            <h4 class="sub-tittle-w3 text-uppercase text-center" style="color:green"><b>What I do in my free time</b></h4>
-            <h3 class="tittle-w3 text-uppercase mb-lg-5 mb-3 text-center"></h3>
-            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner" role="listbox">
-                    <div class="carousel-item active">
-                        <div class="whatIdoWhenIamFree_grid center">
-                            <div class="whatIdoWhenIamFree_grid-inn text-uppercase">
-                                <i class="fas fa-quote-left"></i>
-                                <p>Cooking and Baking</p>
-                            </div>
-                            <h3>When I am not on my computer, you can find me in my kitchen </h3>
-
-                            
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="whatIdoWhenIamFree_grid text-center">
-                            <div class="whatIdoWhenIamFree_grid-inn text-uppercase">
-                                <i class="fas fa-quote-left"></i>
-                                <p>I always run out of Coffee and Coke</p>
-                            </div>
-                            <h3>
-                            	Has that to be explained?! Lol :D
-                            </h3>
-                            
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="whatIdoWhenIamFree_grid">
-                            <div class="whatIdoWhenIamFree_grid-inn text-uppercase">
-                                <i class="fas fa-quote-left"></i>
-                                <p>Football</p>
-
-                            </div>
-                            <h3>The one with the feet. Yes! I love it!</h3>
-                            
-                        </div>
-                    </div>
-                    <a class="carousel-control-prev test" href="#carouselExampleControls" role="button" data-slide="prev">
-									<span class="fas fa-long-arrow-alt-left"></span>
-									<span class="sr-only">Previous</span>
-								</a>
-                    <a class="carousel-control-next test" href="#carouselExampleControls" role="button" data-slide="next">
-									<span class="fas fa-long-arrow-alt-right" aria-hidden="true"></span>
-									<span class="sr-only">Next</span>
-
-								</a>
-                </div>
-            </div>
-        </div>
+<a id="projects" ></a>
+<div class="projectscontainer" data-aos="fade-up">
+  <div class= "filterDiv mlcv" style="padding:2px;">
+    <div id="column1" style="background:url('ecg.jpg') no-repeat;background-position: center; background-size: contain;"></div>
+    <div id="column2" style="">
+        <h3 style="font-family:'AvenirLTProLight';">CNN LSTM Attention based ECG Signal Classification</h3>
+        <p style="font-family:'AvenirLTProLight';">Employed CNN+Bidirectional LSTM+ Attention Model for classifying varied length 12 Lead ECG signals (Dataset: PhysioNet/CinC 2020) into 9 different types of cardiac arrhythmia with an f1-score ~ 0.8. CNN was used for a feature extraction tool in the normalized input signal. LSTM was later used with attention to identify patterns in the ECG data. </p>
+         <a target="_new" href="https://github.com/muneebpandith/CNN-LSTM-Attention-based-ECG-Signal-Classification"><button>Link</button></a>
     </div>
-    <!-- //whatIdoWhenIamFree -->
-    <!-- /Contact-->
-    <section class="contact py-lg-5 py-md-5 py-3" id="contact">
-        <div class="container">
-            <div class="inner-sec-w3ls py-lg-5 py-3">
-                <h4 class="sub-tittle-w3 text-uppercase text-center"></h4>
-                <h3 class="tittle-w3 text-uppercase mb-lg-5 mb-3 text-center text-white">Where to find me?</h3>
+  </div>
+</div>
 
-               
-                <div class="address row mt-lg-5">
+<div class="projectscontainer" data-aos="fade-up">
+  <div class= "filterDiv mlcv" style="padding:2px;">
+    <div id="column1" style="background:url('ddd.jpg') no-repeat;background-position: center; background-size: contain;"></div>
+    <div id="column2" style="">
+        <h3 style="font-family:'AvenirLTProLight';">Ensemble of Deep Learning Architectures for Driver Drowsiness Detection</h3>
+        <p style="font-family:'AvenirLTProLight';">The proposed ensemble architecture consists of two deep CNN models of InceptionV3 that exclusively perform eye and mouth subsample feature extraction in the face picture. The two networks' output is transferred using stacking to the substructure logic of the ensemble. The device performance decides the state of the driver, along with a probability ranking, viz., drowsy and non-drowsy.</p>
+         <a target="_new" href="https://github.com/muneebpandith/Ensemble-of-Deep-Learning-Architectures-for-Driver-Drowsiness-Detection"><button>Link</button></a>
+    </div>
+  </div>
+</div>
+<div class="projectscontainer" data-aos="fade-up">
+  <div class= "filterDiv nlp" style="padding:2px;">
+    <div id="column1" style="background:url('corpse.jpg') no-repeat;background-position: center; background-size: contain;"></div>
+    <div id="column2" style="">
+        <h3 style="font-family:'AvenirLTProLight';">Nuggets for NLP - Predicting the most probable next word for a given word </h3>
+        <p style="font-family:'AvenirLTProLight';">Given a corpse <i>C</i>, the objective is to develop an algorithm that predicts the most expected next word <i>W'</i> to a given word <i>W</i> based on frequency analysis of <i>W</i> & <i>W'</i> in <i>C</i>. The algorithm finds by the basyesian probability P(<i>W'</i>|<i>W</i>) defined by the function <i>f(W,W')</i> that finds the probabilty of the occurence of <i>W'</i> given an immediate priori occurence of <i>W</i> in <i>C</i>. The algorithm is extended to learn on the transition matrix so generated to find <i>n</i> sentences (with or without semantics) given a seed word <i>W</i>. </p>
+         <a target="_new" href="https://github.com/muneebpandith/Hands-on-NLP#Q1"><button>Link</button></a>
+    </div>
+  </div>
+</div>
+<div class="projectscontainer" data-aos="fade-up">
+  <div class= "filterDiv nlp" style="padding:2px;">
+    <div id="column1" style="background:url('tokenizer.jpg') no-repeat;background-position: center; background-size: contain;"></div>
+    <div id="column2" style="">
+        <h3 style="font-family:'AvenirLTProLight';">Corpse Parser and Tokenizer for random tweets</h3>
+        <p style="font-family:'AvenirLTProLight';">The algorithm parses a corpse of tweets separated in lines to detect hashtags, questions, excalmation marks, urls, numbers (floating point) and negation words. the tokenizer then classifies each tweet under individual categories.</p>
+         <a target="_new" href="https://github.com/muneebpandith/Hands-on-NLP#Q2"><button>Link</button></a>
+    </div>
+  </div>
+</div>
 
-                    <div class="col-md-4 address-grid aos-init" data-aos="flip-up">
-                        <div class="address-info">
-                            <div class="address-left text-center">
-                                <i class="far fa-map"></i>
-                            </div>
-                            <div class="address-right text-center">
-                                <h6 class="my-3">Address</h6>
-                                <p>Bharti ST203,<br>Indian Institute of Technology, Delhi
+<div class="projectscontainer" data-aos="fade-up">
+  <div class= "filterDiv nsl" style="padding:2px;">
+    <div id="column1" style="background:url('nsl.jpg') no-repeat;background-position: center; background-size: contain;"></div>
+    <div id="column2" style="">
+        <h3 style="font-family:'AvenirLTProLight';"> Digital Signature Scheme (RSA+MD5) </h3>
+        <p style="font-family:'AvenirLTProLight';">The C++ Implementation of my Digital Signature Algorithm featuring Encryption/Decryption using RSA Algorithm and Hashing Scheme using MD5 Digest. Let's keep the in-built cryptographic libraries at bay.</p>
+         <a target="_new" href="https://github.com/muneebpandith/Network-Security-Nuggets/tree/master/DigitalSignature_By_Muneeb"><button>Link</button></a>
+    </div>
+  </div>
+</div>
 
-                                </p>
-                            </div>
-                        </div>
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterDiv");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
 
-                    </div>
-                    <div class="col-md-4 address-grid aos-init" data-aos="flip-up">
-                        <div class="address-info">
-                            <div class="address-left text-center">
-                                <i class="far fa-envelope"></i>
-                            </div>
-                            <div class="address-right text-center">
-                                <h6 class="my-3">Email</h6>
-                                <p>
-                                    <a href="mailto:muneeb.ahmed@cse.iitd.ac.in"> muneeb.ahmed@cse.iitd.ac.in</a>
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
 
-                                </p>
-    
-                            </div>
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
 
-                        </div>
-                    </div>
-                    <div class="col-md-4 address-grid aos-init" data-aos="flip-up">
-                        <div class="address-info">
-                            <div class="address-left text-center">
-                                <i class="fas fa-mobile-alt"></i>
-                            </div>
-                            <div class="address-right text-center">
-                                <h6 class="my-3">Blog</h6>
-                                <p><a href="">Blog</a></p>
+// Add active class to the current button (highlight it)
+/*var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}*/
 
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="col-md-4 address-grid aos-init" data-aos="flip-up">
-                        <div class="address-info">
-                    
-                        <div class="address-right text-center">
-                            <h6 class="my-3">Github</h6>
-                            <a href="https://github.com/muneebpandith" target="_blank">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                       <div class="col-md-4 address-grid aos-init" data-aos="flip-up">
-                        <div class="address-info">
-                    
-                        <div class="address-right text-center">
-                            <h6 class="my-3">Twitter</h6>
-                    
-                            <a href="https://www.twitter.com/munneeb" target="_blank">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>    
-                 <div class="col-md-4 address-grid aos-init" data-aos="flip-up">
-                        <div class="address-info">
-                    
-                        <div class="address-right text-center">
-                            <h6 class="my-3">Linkedin</h6>   
-                    
-                            <a href="https://in.linkedin.com/in/muneebpandith" target="_blank">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                        </div>
-                    
-                </div>
-            </div>
-            
-                        
-                   
-                    </div>
-        
-	<h4 class="sub-tittle-w3 text-uppercase mb-lg-5 mb-3 text-center text-white" style="margin-top:20px;">2019. Copyleft. Made with <3 by Muneeb. Hosted by Github
-													     </h4>
-													     </div>										
-            </div>
-        
-
-                  
-    </section>
-   
-  
-    
-
-    <script src="./js/jquery-2.2.3.min.js"></script>
-    
-
-    <script src="./js/aos.js"></script>
-    <script>
-        AOS.init({
-            easing: 'ease-out-back',
-            duration: 1000
-        });
-
-    </script>
-    <!-- sticky nav bar-->
-    <script>
-        $(() => {
-
-            //On Scroll Functionality
-            $(window).scroll(() => {
-                var windowTop = $(window).scrollTop();
-                windowTop > 100 ? $('nav').addClass('navShadow') : $('nav').removeClass('navShadow');
-                windowTop > 100 ? $('ul.nav-honey').css('top', '50px') : $('ul.nav-honey').css('top', '160px');
-            });
-
-            //Click Logo To Scroll To Top
-            $('#logo').on('click', () => {
-                $('html,body').animate({
-                    scrollTop: 0
-                }, 500);
-            });
-
-           
-            //Toggle Menu
-            $('#menu-toggle').on('click', () => {
-                $('#menu-toggle').toggleClass('closeMenu');
-                $('ul').toggleClass('showMenu');
-
-                $('li').on('click', () => {
-                    $('ul').removeClass('showMenu');
-                    $('#menu-toggle').removeClass('closeMenu');
-                });
-            });
-
-        });
-
-    </script>
-    <script src="./js/jquery.roadmap.js"></script>
-
-    <script>
-        $(document).ready(function() {
-
-            var events = [
-		{
-                    date: 'February 2020 - Present',
-                    content: 'Doctor of Philosophy (Ph.D) <small>Indian Institute of Technology, Delhi</small>'
-                },
-		{
-                    date: 'January 2020',
-                    content: 'Acceptance of Conference paper <small>IEEE COMSNET 2020</small>'
-                },			
-		{
-                    date: 'June 2020 - February 2020',
-                    content: 'Project Research Scientist <small>Indian Institute of Technology, Delhi</small>'
-                },
-		{
-                    date: 'July 2018 - June 2020',
-                    content: 'M.Tech Computer Engineering <small>Jamia Millia Islamia</small>'
-                },
-		{
-                    date: '2020',
-                    content: 'Certification in Python <small>Google</small>'
-                },			
-                {
-                    date: '2018, 2019, 2020',
-                    content: 'GATE (CS) 2018, 2019 & 2020 <small>Percentile: 96.9%</small>'
-                },
-                {
-                    date: 'Oct 2013- Dec 2017',
-                    content: 'B.Tech Computer Science & Engg.<small>University of Kashmir</small>'
-                },
-                {
-                    date: '2015',
-                    content: 'Certified Linux Administrator<small>National Institute of Electronics & Information Technology, Srinagar</small>'
-                },
-                {
-                    date: '2018',
-                    content: 'Acceptance of Conference Paper<small>Conference on Sofrware Engineering & Data Sciences</small>'
-                }
-               
-                
-            ];
-
-            $('#my-timeline').roadmap(events, {
-                eventsPerSlide: 6,
-                slide: 1,
-                prevArrow: '<i class="fas fa-chevron-left"></i>',
-                nextArrow: '<i class="fas fa-chevron-right"></i>'
-            });
-        });
-
-    </script>
-    <!-- simpleLightbox -->
-    <script src="./js/simpleLightbox.js"></script>
-    <script>
-        $('.proj_gallery_grid a').simpleLightbox();
-
-    </script>
-    <!-- //simpleLightbox -->
-   
-    <script src="./js/jquery.waypoints.min.js"></script>
-
-   
-
-    <!--/ start-smoth-scrolling -->
-    <script src="./js/move-top.js"></script>
-    <script src="./js/easing.js"></script>
-    <script>
-        jQuery(document).ready(function($) {
-            $(".scroll").click(function(event) {
-                event.preventDefault();
-                $('html,body').animate({
-                    scrollTop: $(this.hash).offset().top
-                }, 900);
-            });
-        });
-
-    </script>
-    <script>
-        $(document).ready(function() {
-            $().UItoTop({
-                easingType: 'easeOutQuart'
-            });
-
-        });
-
-    </script>
-    <!--// end-smoth-scrolling -->
-     
-    <script src="./js/bootstrap.js"></script>
+function selectchange()
+{
+  var x = document.getElementById("selectfilter").value;
+  filterSelection(x);
+}
 
 
 
+</script>
 
-	<a href="#" id="toTop" style="display: block;">
-		<span id="toTopHover"></span>To Top
-	</a>
+
+	</div>
+<script src="aos.js"></script>
+  <script>
+AOS.init();
+  </script>		
 </body>
 </html>
