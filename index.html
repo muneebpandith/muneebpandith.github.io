@@ -16,7 +16,7 @@
 		@font-face {
      		font-family: 'AvenirLTProLight';
   			src: url('AvenirLTProLight.woff');
-			
+			}
 		@font-face {
      		font-family: 'Questrial';
   			src: url('Questrial-Regular.ttf');
@@ -368,7 +368,7 @@
 	        	<a href="https://muneebpandith.github.io/Muneeb_CV.pdf"><div style="font-family:AvenirLTProLight;font-weight:bold; background-color:rgba(0,80,255,1); color:white;">CV/RESUME</div></a>
 	        	<a href="#projects"><div style="font-family:AvenirLTProLight;font-weight:bold;background-color:rgba(232,183,58,1);color:black;">PROJECTS</div></a>
 	        </div>
-	        <p style="">I am a developer. Also I define myself as an ML enthusiast per se having interests in theoretical and applied deep learning for real-world problems among which I find vision-related machine learning quite fascinating. Very recently, my inclination towards collaborative robotics at the TIH Cobotics Laboratory (IITD) has turned me in to explore reinforcement learning on haptics signals. Previously I have demonstrated project work in natural languages, data generation, cryptography and in applied-mathematics besides development.</p>
+	        <p style="">I am a developer. Also I find myself to be an ML enthusiast per se having interests in theoretical and applied deep learning for real-world problems among which I find vision-related machine learning quite fascinating. Very recently, my inclination towards collaborative robotics at the TIH Cobotics Laboratory (IITD) has turned me in to explore reinforcement learning on haptics signals. I have developed the APIs necessary for running up MEC system for 5G Testbedat IITD. Previously I have demonstrated project work in natural languages, data generation, cryptography and in applied-mathematics besides development.</p>
 
 	        <div id="headerbuttons" style="margin-bottom:26px; margin-top:0px;" class="mobileviewdisable" >
 	        	<a href="https://muneebpandith.github.io/Muneeb_CV.pdf"><div style="font-family:AvenirLTProLight;font-weight:bold; background-color:rgba(0,80,255,1); color:white;">CV/RESUME</div></a>
@@ -464,13 +464,13 @@
 
 <div id="myBtnContainer" style="margin-bottom:20px;position:relative;float:right;right:60px;">
   <i>Tags: &nbsp</i>
-   <select style="width:100px;background-color: #b0b9cf;" onchange="selectchange()" id="selectfilter">
-  	<option onchange="filterSelection('all')" value="all" class="btn">ALL</option>
-  	<option onchange="filterSelection('mlcv')" value="mlcv" class="btn">Machine Learning (Computer Vision)</option>
-  	<option onchange="filterSelection('nlp')" value="nlp" class="btn">Machine Learning (NLP)</option>
-  	<option onchange="filterSelection('nls')" value="nls" class="btn">Networks and Cryptography</option>
-  	<option onchange="filterSelection('dmsc')" value="dmsc" class="btn">Data Mining and Soft Computing</option>
-  	<option onchange="filterSelection('dev')" value="dev" class="btn">Development</option>
+   <select   style="width:100px;background-color: #b0b9cf;" onchange="selectchange()" id="selectfilter">
+  	<option  value="all" class="btn">ALL</option>
+  	<option  value="mlcv" class="btn">Machine Learning (Computer Vision)</option>
+  	<option  value="nlp" class="btn">Machine Learning (NLP)</option>
+  	<option  value="nls" class="btn">Networks and Cryptography</option>
+  	<option  value="dmsc" class="btn">Data Mining and Soft Computing</option>
+  	<option  value="dev" class="btn">Development</option>
   	
   </select>
 </div>
@@ -507,6 +507,7 @@
     </div>
   </div>
 </div>
+
 <div class="projectscontainer" data-aos="fade-up">
   <div class= "filterDiv nlp" style="padding:2px;">
     <div id="column1" style="background:url('tokenizer.jpg') no-repeat;background-position: center; background-size: contain;"></div>
@@ -528,6 +529,39 @@
     </div>
   </div>
 </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 <script>
 filterSelection("all")
@@ -546,7 +580,9 @@ function w3AddClass(element, name) {
   arr1 = element.className.split(" ");
   arr2 = name.split(" ");
   for (i = 0; i < arr2.length; i++) {
-    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i]; 
+    //alert("After addclassname New classname::"+element.className);
+   }
   }
 }
 
@@ -560,6 +596,7 @@ function w3RemoveClass(element, name) {
     }
   }
   element.className = arr1.join(" ");
+  //alert("After RemoveClass. New classname::"+element.className)
 }
 
 // Add active class to the current button (highlight it)
@@ -579,7 +616,7 @@ function selectchange()
   filterSelection(x);
 }
 
-//
+
 
 </script>
 
