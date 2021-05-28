@@ -3,6 +3,7 @@
 <head>
 <title>Muneeb Ahmed</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
 	<link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
@@ -207,6 +208,160 @@
 		.mobileviedisable{
 			display:block;
 		}
+
+						.Timeline {
+				 position: relative;
+				  display: flex;
+				  align-items: center;
+
+
+				  
+				}
+
+				.event1,
+				.event2, .event3 {
+				  position: relative;
+				}
+
+				.event1Bubble {
+				  position: relative;
+				  background-color: rgba(158, 158, 158, 0.1);
+				  width: 139px;
+				  height: 60px;
+				  top: 0px;
+				  left: 0px;
+				  border-radius: 5px;
+				  box-shadow: inset 0 0 5px rgba(158, 158, 158, 0.64)
+				}
+
+				.event2Bubble {
+				  position: relative;
+				  background-color: rgba(158, 158, 158, 0.1);
+				  width: 139px;
+				  height: 60px;
+				  left: 0px;
+				  top: 10px;
+				  border-radius: 5px;
+				  box-shadow: inset 0 0 5px rgba(158, 158, 158, 0.64)
+				}
+
+
+
+
+
+				.eventTime {
+				  display: flex;
+				}
+
+				.DayDigit {
+				  font-size: 27px;
+				  font-family: "Arial Black", Gadget, sans-serif;
+				  margin-left: 10px;
+				  color: #4C4A4A;
+				}
+
+				.Day {
+				  font-size: 11px;
+				  margin-left: 5px;
+				  font-weight: bold;
+				  margin-top: 10px;
+				  font-family: Arial, Helvetica, sans-serif;
+				  color: #4C4A4A;
+				}
+
+				.MonthYear {
+				  font-weight: 600;
+				  line-height: 10px;
+				  color: #9E9E9E;
+				  font-size: 9px;
+				}
+
+				.eventTitle {
+				  font-family: "Arial Black", Gadget, sans-serif;
+				  color: #a71930;
+				  font-size: 11px;
+				  text-transform: uppercase;
+				  display: flex;
+				  flex: 1;
+				  align-items: center;
+				  margin-left: 12px;
+				  margin-top: 5px;
+				  margin-bottom: 5px;
+				}
+
+				.tline0{
+
+					height:5px; 
+					width:150px;
+				}
+				.tline{
+
+					height:5px; 
+					width:300px;
+				}
+
+				.tline2{
+
+					height:5px; 
+					width:50px;
+				}
+				.tline3{
+
+					height:20px; 
+					width:42px;
+				}
+
+
+				.time {
+				  position: relative;
+				  font-family: Arial, Helvetica, sans-serif;
+				  width: 139px;
+				  font-size: 8px;
+				  margin-top: 0px;
+				  margin-left: 0px;
+				  color: #9E9E9E;
+
+				  text-align:center;
+				  margin-top:5px;
+				}
+
+				.eventAuthor {
+				  position: relative;
+				  font-family: Arial, Helvetica, sans-serif;
+				  color: #9E9E9E;
+				  font-size: 8px;
+				  width: 139px;
+				  top: 0px;
+				  left: 0px;
+				  text-align:center;
+				  margin-top:10px;
+				}
+
+				.now{
+				     background-color: #004165;
+				    color: white;
+				    border-radius: 7px;
+				    margin: 5px;
+				    padding: 4px;
+				    font-size: 10px;
+				    font-family: Arial, Helvetica, sans-serif;
+				    border: 2px solid white;
+				    font-weight: bold;
+				    box-shadow: 0 0 0 2px #004165;
+
+				}
+
+				.futureGray{
+				     filter: grayscale(1);
+				    -webkit-filter: grayscale(1);
+				  
+				}
+
+				.futureOpacity{
+				  -webkit-filter: opacity(.3);
+				  filter: opacity(.3);
+				  
+				}
 		@media only screen and (max-width: 1300px) and (min-width:701px)
 		{
 			#col2{
@@ -322,6 +477,30 @@
 			clear:both;
 			display:block;
 		}
+
+		.Timeline{
+			transform: rotate(90deg);
+			 display: flex;
+  			align-items: center;
+  			 min-height:400px;
+  			
+		}
+		.event1,
+		.event2, .event3 {
+			transform: rotate(-90deg);
+  		//position: relative;
+  		margin-right:10px;
+			}
+
+		.now{
+		
+			transform: rotate(-90deg);
+			//margin-bottom:150px;
+			//width:300px;
+		}
+
+
+
 		}
 	</style>
 </head>
@@ -329,9 +508,11 @@
 <body>
 	<div id="nav" style="">
 		<ul>
-			<li><a href="#header">Bio</a></li>
-			<li ><a href="#projects">Projects/Research</a></li>
-			<li ><a href="#pub">Research</a></li>
+			<li><a href="#header">🎓 Bio</a></li>
+			<li ><a href="#projects">📚 Projects/Research</a></li>
+			<!--<li ><a href="#pub">Research</a></li>-->
+			<li ><a href="" onclick="alert('I am thinking about that, yet!');">📜 Blog</a></li>
+			
 
 		</ul>
 	</div>
@@ -392,7 +573,7 @@
 
 	<br>
 	<br>
-	<div id="container" style="display:block; position:relative; width:90%; margin:0 auto;">
+<div id="container" style="display:block; position:relative; width:90%; margin:0 auto;">
 		 
 <style>
 .filterDiv {
@@ -402,8 +583,10 @@
   display: none;
   width:90%;
   margin:0 auto;
-   box-shadow:-11px 11px 17px 10px rgb(138 131 124 / 23%);
-    border: 1px solid #79b2ec;
+   //box-shadow:-11px 11px 17px 10px rgb(138 131 124 / 23%);
+   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+
+    border: 1px solid #00000033;
     border-radius:10px;
    
 }
@@ -460,7 +643,7 @@
 
 </style>
 
-<h2 style="font-family: 'AvenirLTProLight',sans-serif;padding-left:60px;"> Projects | Research </h2>
+<h2 style="font-family: 'AvenirLTProLight',sans-serif;padding-left:60px;"> 📚 Projects | Research </h2>
 
 <div id="myBtnContainer" style="margin-bottom:20px;position:relative;float:right;right:60px;">
   <i>Tags: &nbsp</i>
@@ -544,39 +727,9 @@
     </div>
   </div>
 </div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
+
+
 
 <script>
 filterSelection("all")
@@ -636,10 +789,197 @@ function selectchange()
 </script>
 
 
-	</div>
+</div>
+
+
+
+<div style="clear:both; width:100px; position:relative; margin:50px auto; box-shadow: 0px 0px 0px 2px rgba(232,183,58,1);"></div>
+
+<div id="container" style="display:block; position:relative; width:90%; margin:60px auto; margin-top:70px;">
+
+<h2 style="font-family: 'AvenirLTProLight',sans-serif;padding-left:60px;"> 🕔 Journey (So far!)</h2>
+
+<style>
+
+</style>
+
+
+
+<div class="Timeline" style="position:relative;margin-top:50px;">
+
+
+
+
+  <svg class="tline0" >
+  <line x1="0" y1="0" x2="150" y2="0" style="stroke:#004165;stroke-width:5;"/>
+  Sorry, your browser does not support inline SVG.
+</svg>
+
+
+  <div class="event1">
+    
+    <div class="event1Bubble">
+      <div class="eventTime">
+        <div class="DayDigit" style="font-size:23px;">2017</div>
+        <div class="Day">December
+          <div class="MonthYear">Bachelors</div>
+        </div>
+      </div>
+      <div class="eventTitle">🎓 Graduated</div>
+    </div>
+    <div class="eventAuthor" style="color:#000; "><i>University of Kashmir</i></div>
+
+    <div class="time" style="color:#000;">B.Tech (CSE)</div>
+    
+  </div>
+  
+  <svg class="tline">
+  <line  x1="0" y1="0" x2="300" y2="0" style="stroke:#004165;stroke-width:5" />
+  Enable javascript!
+</svg>
+
+  <div class="now">
+    GATE (2018)
+  </div>  
+ <div class="now">
+    JEST (2018)
+  </div> 
+
+  <div class="now">
+    GATE (2019)
+  </div> 
+
+
+
+
+ <svg class="tline">
+  <line  x1="0" y1="0" x2="300" y2="0" style="stroke:#004165;stroke-width:5" />
+  Enable javascript!
+
+</svg>
+  <div class="event2">
+    
+    <div class="event1Bubble">
+      <div class="eventTime">
+        <div class="DayDigit" style="font-size:23px;">2020</div>
+        <div class="Day">December
+          <div class="MonthYear">Masters</div>
+        </div>
+      </div>
+      <div class="eventTitle">🎓 Graduated M2</div>
+    </div>
+    <div class="eventAuthor" style="color:#000;"><i>Jamia Millia Islamia University, New Delhi</i></div>
+    <div class="time" style="color:#000;">M.Tech (Computer Engg.)</div>
+    
+  </div>
+ 
+
+  
+ <svg class="tline">
+  <line x1="0" y1="0" x2="300" y2="0" style="stroke:#004165;stroke-width:5" />
+  Enable javascript!
+</svg>
+
+  <div class="now">
+    GATE (2020)
+  </div>  
+
+  <div class="now">
+    GATE (2021)
+  </div>    
+
+
+
+ <svg class="tline">
+  <line   x1="0" y1="0" x2="300" y2="0" style="stroke:#004165;stroke-width:5" />
+  Enable javascript!
+</svg>
+
+
+
+
+
+  <div class="event3">
+    
+    <div class="event1Bubble">
+      <div class="eventTime">
+        <div class="DayDigit">💼</div>
+        <div class="Day">May 2020 
+          <div class="MonthYear">to Feb 2021</div>
+
+        </div>
+      </div>
+      <div class="eventTitle" style="font-size:10px;">Project Scientist</div>
+    </div>
+    <div class="eventAuthor" style="color:#000;"><i>Indian Institute of Technology, Delhi</i></div>
+      
+    <!--<div class="time2">1 : 32 PM</div>-->
+  </div>
+  
+ <svg class="tline" style="height:5px; width:50px;">
+  <line  x1="0" y1="0" x2="50" y2="0" style="stroke:#004165;stroke-width:5" />
+ Enable javascript!
+</svg>
+
+  <div class="now">
+    Persuing Ph.D at IITD
+  </div>  
+    
+  
+  <svg class="tline0">
+  <line class="tline" x1="0" y1="0" x2="150" y2="0" style="stroke:rgba(162, 164, 163, 0.37);stroke-width:5" />
+  Sorry, your browser does not support inline SVG.
+</svg>
+  <!--
+
+  <div class="event3 futureGray ">
+    <div class="event1Bubble futureOpacity">
+      <div class="eventTime">
+        <div class="DayDigit">05</div>
+        <div class="Day">
+           Tuesday
+          <div class="MonthYear">May 2016</div>
+        </div>
+      </div>
+      <div class="eventTitle">Anticipated Hire</div>
+    </div>
+      <svg height="20" width="20">
+    <circle cx="10" cy="11" r="5" fill="rgba(162, 164, 163, 0.37)" />
+    </svg>
+  </div>
+
+-->
+
+ <svg class="tline2">
+<line   x1="0" y1="0" x2="50" y2="0" style="stroke:#004165;stroke-width:5" /> 
+</svg>
+ <svg class="tline3">
+<line x1="1" y1="0" x2="1" y2="20" style="stroke:#004165;stroke-width:2" /> 
+<circle cx="11" cy="10" r="3" fill="#004165" />  
+<circle cx="21" cy="10" r="3" fill="#004165" />  
+<circle cx="31" cy="10" r="3" fill="#004165" /> 
+<circle cx="31" cy="10" r="3" fill="#004165" />    
+<line x1="41" y1="0" x2="41" y2="20" style="stroke:#004165;stroke-width:2" /> 
+</svg>  
+  
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
 <script src="aos.js"></script>
   <script>
-AOS.init();
+AOS.init({once: true});
   </script>		
 </body>
 </html>
