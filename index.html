@@ -9,6 +9,12 @@
 	<link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="aos.css" />
+<!--
+Credits: I want to credit some components/ ideas to the places I found them.
+1. Timeline: Codepen (although I have changed the code a lot!)
+2. Wix (The idea of the design of a public personal website)
+3. Carousel: Materialize (The code is as it is as per their documentation.)
+-->
 	<style>
 		html {
   		scroll-behavior: smooth;
@@ -209,7 +215,7 @@
 			display:block;
 		}
 
-						.Timeline {
+				.Timeline {
 				 position: relative;
 				  display: flex;
 				  align-items: center;
@@ -227,7 +233,7 @@
 				  position: relative;
 				  background-color: rgba(158, 158, 158, 0.1);
 				  width: 139px;
-				  height: 60px;
+				  height: 80px;
 				  top: 0px;
 				  left: 0px;
 				  border-radius: 5px;
@@ -273,7 +279,7 @@
 				  display: flex;
 				  flex: 1;
 				  align-items: center;
-				  margin-left: 12px;
+				  margin-left: 5px;
 				  margin-top: 5px;
 				  margin-bottom: 5px;
 				  text-align: center;
@@ -313,6 +319,7 @@
 
 				  text-align:center;
 				  margin-top:5px;
+				  font-size:12px;
 				}
 
 				.eventAuthor {
@@ -325,6 +332,8 @@
 				  left: 0px;
 				  text-align:center;
 				  margin-top:10px;
+				  font-size:12px;
+				  font-weight:bold;
 				}
 
 				.now{
@@ -338,6 +347,7 @@
 				    border: 2px solid white;
 				    font-weight: bold;
 				    box-shadow: 0 0 0 2px #004165;
+				    
 
 				}
 
@@ -351,7 +361,37 @@
 				  -webkit-filter: opacity(.3);
 				  filter: opacity(.3);
 				  
+
 				}
+				.carousel
+        {
+            height:400px;
+            perspective: 90vw;
+            margin-top:-50px;
+        }
+        .carousel-item{
+        display: flex;
+        align-items: start;
+        justify-content: center;
+
+        }
+        .carousel .carousel-item img{
+            width: auto !important;
+            height: 300px !important;
+           
+        }
+        .carousel .carousel-item h3{
+            margin:0;
+            padding:0;
+            background:#fff;
+            color:#000;
+            padding:10px 5px;
+            font-weight: bold;
+            font-size:1em;
+            text-align:center;
+            font-family: Arial;
+
+        }  
 		@media only screen and (max-width: 1300px) and (min-width:701px)
 		{
 			#col2{
@@ -472,12 +512,13 @@
 			transform: rotate(90deg);
 			 display: flex;
   			align-items: center;
-  			 min-height:400px;
+  			height:800px;
+  			top:-200px;
   			
 		}
 		.event1,
 		.event2, .event3 {
-			transform: rotate(-90deg);
+		transform: rotate(-90deg);
   		//position: relative;
   		margin-right:10px;
 			}
@@ -487,23 +528,37 @@
 			transform: rotate(-90deg);
 			//margin-bottom:150px;
 			//width:300px;
-			font-size: 16px;
+			font-size: 13px;
+		}
+		.eventAuthor
+		{
+			font-size:13px;
+			font-weight:bold;
+		}
+		.time
+		{
+			font-size:12px;
 		}
 
 
 
 		}
 	</style>
+
+
+
+
 </head>
 
 <body>
 	<div id="nav" style="">
 		<ul>
 			<li><a href="#header">🎓 Bio</a></li>
-			<li ><a href="#projects">📚 Projects/Research</a></li>
+			<li ><a href="#projects_research">📚 Projects/Research</a></li>
 			<!--<li ><a href="#pub">Research</a></li>-->
 			<li ><a href="" onclick="alert('I am thinking about that, yet!');">📜 Blog</a></li>
-			
+			<li ><a href="#publications" >📃 Publications</a></li>
+			<li ><a href="#contact" >📧 Contact</a></li>
 
 		</ul>
 	</div>
@@ -576,9 +631,10 @@
   margin:0 auto;
    //box-shadow:-11px 11px 17px 10px rgb(138 131 124 / 23%);
    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
-
+margin-bottom:14px;
     border: 1px solid #00000033;
     border-radius:10px;
+    transition: 0.5s;
    
 }
 
@@ -597,17 +653,18 @@
 
 /* Style the buttons */
 .btn {
+  background-color: #f4511e;
   border: none;
-  outline: none;
-  padding: 12px 16px;
-  background-color: #f1f1f1;
-  cursor: pointer;
-  font-family: 'AvenirLTProLight',sans-serif;
+  color: white;
+  padding: 8px 8px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.3s;
 }
 
-.btn:hover {
-  background-color: #ddd;
-}
+.btn:hover {opacity: 1}
 
 .btn.active {
   background-color: #666;
@@ -630,11 +687,12 @@
 .filterDiv:hover{
     
     box-shadow:-11px 11px 17px 0px rgb(138 131 124 / 50%);
+    transition: ease;
 }
 
 </style>
 
-<h2 style="font-family: 'AvenirLTProLight',sans-serif;padding-left:60px;"> 📚 Projects | Research </h2>
+<h2 id="projects_research" style="font-family: 'AvenirLTProLight',sans-serif;"> 📚 Projects | Research </h2>
 
 <div id="myBtnContainer" style="margin-bottom:20px;position:relative;float:right;right:60px;">
   <i>Tags: &nbsp</i>
@@ -788,12 +846,7 @@ filterSelection("all")
 
 <div id="container" style="display:block; position:relative; width:90%; margin:60px auto; margin-top:70px;">
 
-<h2 style="font-family: 'AvenirLTProLight',sans-serif;padding-left:60px;"> 🕔 Journey (So far!)</h2>
-
-<style>
-
-</style>
-
+<h2 style="font-family: 'AvenirLTProLight',sans-serif;"> ⏰ Journey (So far!)</h2>
 
 
 <div class="Timeline" style="position:relative;margin-top:50px;">
@@ -803,7 +856,6 @@ filterSelection("all")
 
   <svg class="tline0" >
   <line x1="0" y1="0" x2="150" y2="0" style="stroke:#004165;stroke-width:5;"/>
-  Sorry, your browser does not support inline SVG.
 </svg>
 
 
@@ -816,7 +868,7 @@ filterSelection("all")
           <div class="MonthYear">Bachelors</div>
         </div>
       </div>
-      <div class="eventTitle">Graduated</div>
+      <div class="eventTitle">Graduated (Bachelors) </div>
     </div>
     <div class="eventAuthor" style="color:#000; "><i>University of Kashmir</i></div>
 
@@ -826,7 +878,6 @@ filterSelection("all")
   
   <svg class="tline">
   <line  x1="0" y1="0" x2="300" y2="0" style="stroke:#004165;stroke-width:5" />
-  Enable javascript!
 </svg>
 
   <div class="now">
@@ -845,7 +896,6 @@ filterSelection("all")
 
  <svg class="tline">
   <line  x1="0" y1="0" x2="300" y2="0" style="stroke:#004165;stroke-width:5" />
-  Enable javascript!
 
 </svg>
   <div class="event2">
@@ -857,7 +907,7 @@ filterSelection("all")
           <div class="MonthYear">Masters</div>
         </div>
       </div>
-      <div class="eventTitle">Graduated M1, M2</div>
+      <div class="eventTitle">Graduated (Masters in CS)</div>
     </div>
     <div class="eventAuthor" style="color:#000;"><i>Jamia Millia Islamia University, New Delhi</i></div>
     <div class="time" style="color:#000;">M.Tech (Computer Engg.)</div>
@@ -868,7 +918,6 @@ filterSelection("all")
   
  <svg class="tline">
   <line x1="0" y1="0" x2="300" y2="0" style="stroke:#004165;stroke-width:5" />
-  Enable javascript!
 </svg>
 
   <div class="now">
@@ -883,7 +932,6 @@ filterSelection("all")
 
  <svg class="tline">
   <line   x1="0" y1="0" x2="300" y2="0" style="stroke:#004165;stroke-width:5" />
-  Enable javascript!
 </svg>
 
 
@@ -897,10 +945,10 @@ filterSelection("all")
           <div class="MonthYear">to Februrary, 2021</div>
         </div>
       </div>
-      <div class="eventTitle">Project Scientist</div>
+      <div class="eventTitle" style="overflow: hidden;">Project Research Scientist</div>
     </div>
     <div class="eventAuthor" style="color:#000;"><i>Indian Institute of Technology, Delhi</i></div>
-    <div class="time" style="color:#000;">M.Tech (Computer Engg.)</div>
+    <div class="time" style="color:#000;">Experience: 8 Months</div>
     
   </div>
 
@@ -909,7 +957,6 @@ filterSelection("all")
   
  <svg class="tline" style="height:5px; width:50px;">
   <line  x1="0" y1="0" x2="50" y2="0" style="stroke:#004165;stroke-width:5" />
- Enable javascript!
 </svg>
 
   <div class="now">
@@ -919,7 +966,6 @@ filterSelection("all")
   
   <svg class="tline0">
   <line class="tline" x1="0" y1="0" x2="150" y2="0" style="stroke:rgba(162, 164, 163, 0.37);stroke-width:5" />
-  Sorry, your browser does not support inline SVG.
 </svg>
   <!--
 
@@ -962,15 +1008,99 @@ filterSelection("all")
 
 
 
+<div style="clear:both; width:100px; position:relative; margin:50px auto; box-shadow: 0px 0px 0px 2px rgb(223 81 130);"></div>
+<div id="container" style="display:block; position:relative; width:90%; margin:60px auto; margin-top:70px;">
+
+<h2 id="publications" style="font-family: 'AvenirLTProLight',sans-serif;"> 📃  Publications </h2>
+<div style="border:0.5px /*solid rgba(158, 158, 158, 0.1);*/ rgb(244 195 69 / 26%); border-radius:5px; background-color:/*rgba(158, 158, 158, 0.1);*/rgba(244,195,69,0.2); color:#000; padding:20px; width:90%; margin:0 auto;">
+
+<p style="font-size:15px; font-family:'consolas'; line-height: 1.5em;text-align: justify;">@inproceedings <br>{9352907,
+  author={Kherani, Arzad Alam and Shukla, Gaurav and Sanadhya, Shashvat and Vasudev, Neha and <u><b>Ahmed, Muneeb</b></u> and Patel, Ashish Singh and Mehrotra, Rashi and Lall, Brejesh and Saran, Huzur and Vutukuru, Mythili and Singh, Abhishek and Seshasayee, Sushila and Viswakumar, Vinodh R and Loganathan, Kishore},
+  booktitle={2021 International Conference on COMmunication Systems   NETworkS (COMSNETS)}, 
+  title={Development of MEC system for indigenous 5G Test-Bed}, 
+  year={2021},
+  volume={},
+  number={},
+  pages={131-133},
+  doi={10.1109/COMSNETS51098.2021.9352907}}
+</p>
+
+</div></div>
+
+
+<link rel="stylesheet" href="materialize.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+<div style="clear:both; width:100px; position:relative; margin:50px auto; box-shadow: 0px 0px 0px 2px rgb(160 165 159);"></div>
+<div id="container" style="display:block; position:relative; width:90%; margin:60px auto; margin-top:70px;">
+<h2 style="font-family: 'AvenirLTProLight',sans-serif;"> 📷 Fresh food on my hobby plate</h2>
+<div id="hobbies" style="padding:20px; width:90%; margin:0 auto; align-items: center;">
+
+	<style>
+        .carousel
+        {
+            height:400px;
+            perspective: 100vw;
+            margin-top:-100px;
+        }
+        .carousel-item{
+        
+        align-items: start;
+        justify-content: center;
+
+        }
+        .carousel .carousel-item img{
+            width: auto !important;
+            height: 300px !important;
+           
+        }
+        .carousel .carousel-item h3{
+
+            background:#fff;
+            color:#000;
+            padding:10px 5px;
+            font-size:0.9em;
+            text-align:center;
+            font-family: 'AvenirLTProLight';
+            text-align: center;
+        }  
+
+
+
+    </style>
+<div class="carousel">
+    <div class="carousel-item"><img src="./snapshots/dandellions.jpg"> <h3>The expialidocious tree</h3></div>
+    <div class="carousel-item"><img src="./snapshots/skuast.jpg"> <h3>A view of the neighborhood</h3></div>
+    <div class="carousel-item"><img src="./snapshots/dew.jpg"> <h3>Old hostel</h3></div>
+    <div class="carousel-item"><img src="./snapshots/dandellions.jpg"> <h3>The expialidocious tree</h3></div>
+    <div class="carousel-item"><img src="./snapshots/skuast.jpg"> <h3>A view of the neighborhood</h3></div>
+    <div class="carousel-item"><img src="./snapshots/dew.jpg"> <h3>Old hostel</h3></div>
+    
+</div>
 
 
 
 
+</div></div>
+<div style="clear:both; width:100px; position:relative; margin:50px auto; box-shadow: 0px 0px 0px 2px rgb(132 223 81);"></div>
+<div id="container" style="display:block; position:relative; width:90%; margin:60px auto; margin-top:70px;">
+<h2 style="font-family: 'AvenirLTProLight',sans-serif;"> Drop me a line 📧  </h2>
+<div id="contact" style="padding:10px; width:90%; margin:0 auto; align-items: center; text-align: justify;"></div>
+On Most (almost all) of the Saturdays and Sundays I am available for discussion about ideas in applied deep-learning and collaborative robotics (over video). If I am otherwise free, I can spend some time over coffee to beseech and get some understanding of the purpose of life. In all the cases, my preferred primary contact is email. If you want to talk to me about these, my email address will be <a href="#header"> somewhere in my bio</a> <i>(A Copy-Paste of my email address might not work though. You will need to type it)</i>. I read almost all of my emails yet sometimes I may not respond immediately. Pardon me for that but I will try to get back to you as soon as it'd be possible for me. After we familiarize I'd be happy to share my Telegram/Signal Id. 
+</div>
 
+
+
+<div style="clear:both; width:100%; position:relative; margin:50px auto 5px auto; box-shadow: 0px 0px 0px 2px rgb(100 100 100); height:40px; background-color: #f1eeee;">
+	<center><h4 style="font-family: 'AvenirLTProLight',sans-serif; padding:10px;"><i> Copyleft. </i>💻. Muneeb :)  </h4></center>
+</div>
 
 <script src="aos.js"></script>
   <script>
 AOS.init({once: true});
+$('.carousel').carousel();
   </script>		
 </body>
 </html>
