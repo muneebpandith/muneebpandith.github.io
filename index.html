@@ -19,6 +19,7 @@ Credits: I want to credit some components/ ideas to the places I found them.
 		html {
   		scroll-behavior: smooth;
   		cursor:pointer;
+  		overflow-x: hidden;
 		}
 		@font-face {
      		font-family: 'AvenirLTProLight';
@@ -29,6 +30,14 @@ Credits: I want to credit some components/ ideas to the places I found them.
   			src: url('Questrial-Regular.ttf');
 			}
 
+		body{
+			position:relative;
+			overflow-x: hidden;
+			width: 100%;
+		}
+		.aos-init:not(.aos-animate):after {
+position: fixed;
+}
 		#nav{
 			width:100%;
 			height:60px;
