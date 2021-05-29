@@ -223,6 +223,7 @@ position: fixed;
 		.mobileviedisable{
 			display:block;
 		}
+		.resnav ul li a.icon {display: none;}
 
 				.Timeline {
 				 position: relative;
@@ -401,6 +402,7 @@ position: fixed;
             font-family: Arial;
 
         }  
+
 		@media only screen and (max-width: 1300px) and (min-width:701px)
 		{
 			#col2{
@@ -431,6 +433,7 @@ position: fixed;
 				width:80%;
 				 
 			}
+			.resnav ul li a.icon {display: none;}
 		}
 		@media only screen and (max-width: 700px){
 			.mobileviewenable{
@@ -439,6 +442,9 @@ position: fixed;
 			.mobileviewdisable{
 				display: none;
 			}
+
+			
+
 
 			.col{
 				clear:both;
@@ -511,7 +517,32 @@ position: fixed;
 			margin-top:10px;
 			margin-left:0px;
 		}
-		
+		#nav ul {
+			width:90%;
+
+		}
+		#nav ul li{
+			height:20px;
+		}
+		.resnav ul li a {float:none;display: none; }
+			  .resnav ul li a.icon {
+			    float: right;
+			    display: block;
+			    padding:0px 10px 0px 0px;
+			    
+			  }
+		.resnav.responsive {position: relative; text-align: center; }
+		  .resnav.responsive ul li a.icon {
+		    position: absolute;
+		    right: 0;
+		    top: 0;
+		    padding:0px 20px 0px 0px;
+		  }
+		  .resnav.responsive ul li a {
+		    float: none;
+		    display: block;
+		    text-align: center;
+		  }
 		#clearondemand{
 			clear:both;
 			display:block;
@@ -560,18 +591,19 @@ position: fixed;
 </head>
 
 <body>
-	<div id="nav" style="">
-		<ul>
-			<li><a href="#header">🎓Bio</a></li>
-			<li ><a href="#projects_research">📚Projects/Research</a></li>
-			<!--<li ><a href="#pub">Research</a></li>-->
-			
-			<li ><a href="#publications" >📃Publications</a></li>
-			<li ><a href="#contact" >📧Contact</a></li>
-			<li ><a href="" onclick="alert('I am thinking about that, yet!');">📜Blog</a></li>
+		<div class="resnav" id="nav" style="" >
+	    <ul>
+	      <li><a href="#header">🎓Bio</a></li>
+	      <li ><a href="#projects_research">📚Projects/Research</a></li>
+	      <!--<li ><a href="#pub">Research</a></li>-->
+	      <li ><a href="#publications" >📃Publications</a></li>
+	       <li ><a href="" onclick="alert('I am thinking about that, yet!');">📜Blog</a></li>
+	      <li ><a href="#contact" >📧Contact</a></li>
+	       <li ><a href="javascript:void(0);" class="icon" style="color:orange;" onclick="myFunction()">☰</a></li>
+	    </ul>
+	  </div>
 
-		</ul>
-	</div>
+
 	<div id="clear"></div>
 	<div id="header">
 		<div class="row" style=" ">
@@ -1112,5 +1144,19 @@ On Most (almost all) of the Saturdays and Sundays I am available for discussion 
 AOS.init({once: true});
 $('.carousel').carousel();
   </script>		
+
+
+
+<script>
+function myFunction() {
+  var x = document.getElementById("nav");
+  if (x.className === "resnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "resnav";
+  }
+}
+</script>
+
 </body>
 </html>
