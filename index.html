@@ -1021,14 +1021,29 @@ position: fixed;
 </head>
 
 <body>
+	<style>
+		.resnav.responsive a.projects_research::before{
+			content:'📚';
+		}
+		.resnav.responsive a.publications::before{
+			content:'📃';
+		}
+		.resnav.responsive a.blog::before{
+			content:'📜';
+		}
+		.resnav.responsive a.contact::before{
+			content:'📧';
+		}
+		
+	</style>
 		<div class="resnav" id="nav" style="" >
 	    <ul>
-	      <li><a href="#header">🎓Bio</a></li>
-	      <li ><a href="#projects_research">📚Projects/Research</a></li>
+	      <li><a href="#header" class="bio">🎓Bio</a></li>
+	      <li ><a href="#projects_research" class="projects_research">Projects/Research</a></li>
 	      <!--<li ><a href="#pub">Research</a></li>-->
-	      <li ><a href="#publications" >📃Publications</a></li>
-	       <li ><a href="" onclick="alert('I am thinking about that, yet!');">📜Blog</a></li>
-	      <li ><a href="#contact" >📧Contact</a></li>
+	      <li ><a href="#publications" class="publications">Publications</a></li>
+	       <li ><a href="" onclick="alert('I am thinking about that, yet!');" class="blog">Blog</a></li>
+	      <li ><a href="#contact" class="contact" >Contact</a></li>
 	       <li ><a href="javascript:void(0);" class="icon" id="toggleicon" style="color:black;" onclick="togglermenu()">☰</a></li>
 	    </ul>
 	  </div>
