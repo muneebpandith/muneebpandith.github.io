@@ -1,0 +1,44 @@
+<html>
+<script type="text/javascript" src="jquery.js"></script>
+
+<input type="text" id="smart_bulb1_power">
+<input type="text" id="smart_bulb1_color">
+<button  onclick="update('smart_bulb1')">Update Bulb </button>
+
+<script type="text/javascript">
+var ROOT = "http://127.0.0.1:5000";
+var API_ROOT = ROOT+"/ELL893/muneeb_majid/smarthome/http";
+
+	function update(devId){
+		if (devId == "smart_bulb1"){
+			var power = document.getElementById("smart_bulb1_power").value;
+			var color = document.getElementById("smart_bulb1_color").value;
+			
+			var data =  JSON.stringify({device:devId, params: {power: power, color: color}});
+			var hash_str = "XUB313";
+
+			var payload = JSON.stringify({device:devId, params: {power: power, color: color}, hash:hash_str});
+			alert(payload);
+			var url = API_ROOT +"/"+devId;
+		}
+
+        $.ajax({
+		    type: 'post',
+		    data: JSON.stringify(payload),
+		    contentType: 'application/json',
+		    dataType: 'json'
+		});
+		
+        /*var url = API_ROOT+'/'+devId;
+        $.post(url,payload,function(success,status,xhr){alert(JSON.parse(success))},'json');
+        */
+        /*var url = API_ROOT+"/"+devId;
+        sender_function(url, payload);
+		*/
+
+	}
+
+
+
+</script>
+</html>
