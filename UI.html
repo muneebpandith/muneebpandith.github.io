@@ -6,7 +6,7 @@
 <button  onclick="update('smart_bulb1')">Update Bulb </button>
 
 <script type="text/javascript">
-var ROOT = "http://48c6-2409-4054-0-fa27-e525-a345-872a-f091.ngrok.io";
+var ROOT = "http://b68a-2409-4054-0-fa27-e525-a345-872a-f091.ngrok.io";
 var API_ROOT = ROOT+"/ELL893/muneeb_majid/smarthome/http";
 
 	function update(devId){
@@ -20,9 +20,10 @@ var API_ROOT = ROOT+"/ELL893/muneeb_majid/smarthome/http";
 			var payload = JSON.stringify({device:devId, params: {power: power, color: color}, hash:hash_str});
 			alert(payload);
 			var url = API_ROOT +"/"+devId;
+			alert(url);
 		}
 
-        $.ajax({
+             $.ajax({
 		    url : url,
 		    type: 'post',
 		    data: JSON.stringify(payload),
