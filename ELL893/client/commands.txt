@@ -1,0 +1,11 @@
+In any browser, or curl request,
+
+#FOR TURNING ON
+http://127.0.0.1:5000/majid_muneeb_home_automation/dev/livingroomlamp/on
+
+#FOR TURNING OFF
+http://127.0.0.1:5000/majid_muneeb_home_automation/dev/livingroomlamp/off
+
+
+Good luck in my absence! 
+Muneeb :)
