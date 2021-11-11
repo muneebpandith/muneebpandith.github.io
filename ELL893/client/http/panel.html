@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Smart Home | Dashboard</title>
+        <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
+        <style>
+            .card{
+            height: 300px;
+        }
+        </style>
+
+        <link href="css/extrastyle.css" rel="stylesheet"/>
+
+    </head>
+    <body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <!-- Navbar Brand-->
+            <a class="navbar-brand ps-3">Smart Home</a>
+            <!-- Sidebar Toggle-->
+            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+            <!-- Navbar Search-->
+            <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+                <div class="input-group">
+                </div>
+            </form>
+            <!-- Navbar-->
+            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#!">Settings</a></li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li><a class="dropdown-item" href="../login.html">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <div class="sb-sidenav-menu-heading">Core</div>
+                            <a class="nav-link" href="panel.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Dashboard (HTTP)
+                            </a>
+        
+
+
+                    
+
+                        </div>
+                    </div>
+                    <div class="sb-sidenav-footer">
+                        <div class="small">Logged in as:</div>
+                        Muneeb/Majid
+                    </div>
+                </nav>
+            </div>
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid px-4">
+                        <h1 class="mt-4">Dashboard and Control</h1>
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item active">Devices</li>
+                        </ol>
+                        <div class="row">
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-primary text-white mb-4">
+                                    <div class="card-body">Smart Bulb <i class="fas fa-lightbulb"></i></div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                            {smart_bulb1}
+                                    </div>
+                                    <div id="controls_device" style="margin:10px; padding:10px;">
+                                        Color:&nbsp;&nbsp;<input type="color" id="smart_bulb1_color" style="width:100%;" onchange="update('smart_bulb1')" value="#ff0000">
+                                    </div>
+                                    <div id="controls_device" style="margin:10px; padding:10px;">
+                                        Power <label class="switch"><input type="checkbox" id="smart_bulb1_power" onchange="update('smart_bulb1')"> <span class="slider round"></span></label>
+                                    </div>
+
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-warning text-white mb-4">
+                                    <div class="card-body">Smart Lock <i class="fas fa-door-open"></i></div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        {smart_lock1}
+                                    </div>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <div id="controls_device" style="margin:10px; padding:10px;">
+                                        Status (Right to Lock) &nbsp;<label class="switch">
+                                            <input type="checkbox" id="smart_lock1_status" checked onchange="update('smart_lock1')"> <span class="slider round"></span></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-danger text-white mb-4">
+                                    <div class="card-body">Smart Fan <i class="fas fa-fan"></i></div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        {smart_fan1}
+                                    </div>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <div id="controls_device" style="margin:10px; padding:10px;">
+                                        Power &nbsp;<label class="switch"><input type="checkbox" id="smart_fan1_power" onchange="update('smart_fan1')"> <span class="slider round"></span></label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-success text-white mb-4">
+                                    <div class="card-body">Smart AC </div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        {smart_ac1}
+                                    </div>
+                                    <div id="controls_device" style="margin:0px; padding:10px;">
+                                        Power &nbsp;<label class="switch"><input type="checkbox" id="smart_ac1_power" onchange="update('smart_ac1')"> <span class="slider round"></span></label>
+                                    </div>
+                                    <div id="controls_device" style="margin:0px; padding:10px;">
+                                        Direction &nbsp;<br>
+                                        <div class="switch-toggle switch-3 switch-candy">
+
+                                                <input id="smart_ac1_h_direction_left" name="state-d" type="radio"/>
+                                                <label for="smart_ac1_h_direction_left" onclick="update('smart_ac1','left')">Left</label>
+
+                                                <input id="smart_ac1_h_direction_center" name="state-d" type="radio" />
+                                                <label for="smart_ac1_h_direction_center" class="disabled" onclick="update('smart_ac1','center')">Center</label>
+                                                
+                                                <input id="smart_ac1_h_direction_right"  name="state-d" type="radio" />
+                                                <label for="smart_ac1_h_direction_right" onclick="update('smart_ac1','right')">Right</label>
+
+                                        </div>
+                                    </div>
+                                    <div id="controls_device" style="margin:5px; padding:5px;">
+                                        Temperature&nbsp;<br>
+                                            <input type="range" onchange="update('smart_ac1')" min="0" max="25" id="smart_ac1_temperature"  style="height:20px;">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <i class="fas fa-table me-1"></i>
+                                Log
+                            </div>
+                            <div class="card-body">
+                            </div>
+                        </div>
+                    </div>
+                </main>
+                <footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid px-4">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">By Muneeb and Majid</div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        
+    </body>
+
+
+<script type="text/javascript">
+var ROOT = "http://127.0.0.1:5000";
+var API_ROOT = ROOT+"/ELL893/muneeb_majid/smarthome/http";
+
+    function update(devId, additional=""){
+        if (devId == "smart_bulb1"){
+            var x = document.getElementById("smart_bulb1_power").checked;
+            if (x == true){power="on"; }
+            if (x == false){power="off";}
+            var color = document.getElementById("smart_bulb1_color").value;
+        
+            var data =  JSON.stringify({device: devId, params: {color:color, power: power}});
+            data = data.replaceAll(":", ": ");
+            data = data.replaceAll(",", ", ");
+            alert(get_hash(data));
+            var hash_str = digital_sign(get_hash(data));
+            var payload = JSON.stringify({device: devId, params: {color: color, power: power}, hash: hash_str});
+            //alert(payload);
+            var url = API_ROOT +"/"+devId;
+        }
+
+        else if (devId == "smart_lock1"){
+            var x = document.getElementById("smart_lock1_status").checked;
+            if (x == true){status="close"; }
+            if (x == false){status="open";}
+            var power = "on";
+            var data =  JSON.stringify({device:devId, params: {door_status:status, power:power}});
+            
+
+            data = data.replaceAll(":", ": ");
+            data = data.replaceAll(",", ", ");
+            var hash_str = digital_sign(get_hash(data));
+            
+            var payload = JSON.stringify({device:devId, params: {door_status:status, power:power}, hash:hash_str});
+            //alert(payload);
+            var url = API_ROOT +"/"+devId;
+        }
+
+
+
+        else if (devId == "smart_fan1"){
+            var x = document.getElementById("smart_fan1_power").checked;
+            if (x == true){power="on"; }
+            if (x == false){power="off";}
+
+            var data =  JSON.stringify({device: devId, params: {power: power}});
+            data = data.replaceAll(":", ": ");
+            data = data.replaceAll(",", ", ");
+            var hash_str = digital_sign(get_hash(data));
+            var payload = JSON.stringify({device: devId, params: {power: power}, hash: hash_str});
+            //alert(payload);
+            var url = API_ROOT +"/"+devId;
+        }
+
+        else if (devId == "smart_ac1"){
+            var x = document.getElementById("smart_ac1_power").checked;
+            if (x == true){power="on"; }
+            if (x == false){power="off";}
+
+            if (additional=="" ){
+              
+                var left = document.getElementById("smart_ac1_h_direction_left").checked;
+                var center = document.getElementById("smart_ac1_h_direction_center").checked;
+                var right = document.getElementById("smart_ac1_h_direction_right").checked;
+                if (left==true){h_direction="left";}
+                else if (right==true){h_direction="right";}
+                else{h_direction="center";}
+            }
+
+            else{
+                h_direction=additional;
+            }
+
+            
+            var temperature = document.getElementById("smart_ac1_temperature").value;
+            if(temperature == "") {temperature="0"}
+            var data =  JSON.stringify({device: devId, params: {h_direction: h_direction, power: power, temperature:temperature}});
+            
+            data = data.replaceAll(":", ": ");
+            data = data.replaceAll(",", ", ");
+            var hash_str = digital_sign(get_hash(data));
+
+            var payload = JSON.stringify({device: devId, params: {h_direction: h_direction, power: power, temperature: temperature}, hash: hash_str});
+            //alert(payload);
+            var url = API_ROOT +"/"+devId;
+        }
+
+
+        
+
+        $.ajax({
+            url : url,
+            type: 'post',
+            data: JSON.stringify(payload),
+            contentType: 'application/json',
+            dataType: 'json',
+            success: function(data) {
+                alert(JSON.stringify(data));
+            }
+        });
+
+
+    }
+
+
+
+</script>
+<script>
+
+var MD5 = function(d){var r = M(V(Y(X(d),8*d.length)));return r.toLowerCase()};function M(d){for(var _,m="0123456789ABCDEF",f="",r=0;r<d.length;r++)_=d.charCodeAt(r),f+=m.charAt(_>>>4&15)+m.charAt(15&_);return f}function X(d){for(var _=Array(d.length>>2),m=0;m<_.length;m++)_[m]=0;for(m=0;m<8*d.length;m+=8)_[m>>5]|=(255&d.charCodeAt(m/8))<<m%32;return _}function V(d){for(var _="",m=0;m<32*d.length;m+=8)_+=String.fromCharCode(d[m>>5]>>>m%32&255);return _}function Y(d,_){d[_>>5]|=128<<_%32,d[14+(_+64>>>9<<4)]=_;for(var m=1732584193,f=-271733879,r=-1732584194,i=271733878,n=0;n<d.length;n+=16){var h=m,t=f,g=r,e=i;f=md5_ii(f=md5_ii(f=md5_ii(f=md5_ii(f=md5_hh(f=md5_hh(f=md5_hh(f=md5_hh(f=md5_gg(f=md5_gg(f=md5_gg(f=md5_gg(f=md5_ff(f=md5_ff(f=md5_ff(f=md5_ff(f,r=md5_ff(r,i=md5_ff(i,m=md5_ff(m,f,r,i,d[n+0],7,-680876936),f,r,d[n+1],12,-389564586),m,f,d[n+2],17,606105819),i,m,d[n+3],22,-1044525330),r=md5_ff(r,i=md5_ff(i,m=md5_ff(m,f,r,i,d[n+4],7,-176418897),f,r,d[n+5],12,1200080426),m,f,d[n+6],17,-1473231341),i,m,d[n+7],22,-45705983),r=md5_ff(r,i=md5_ff(i,m=md5_ff(m,f,r,i,d[n+8],7,1770035416),f,r,d[n+9],12,-1958414417),m,f,d[n+10],17,-42063),i,m,d[n+11],22,-1990404162),r=md5_ff(r,i=md5_ff(i,m=md5_ff(m,f,r,i,d[n+12],7,1804603682),f,r,d[n+13],12,-40341101),m,f,d[n+14],17,-1502002290),i,m,d[n+15],22,1236535329),r=md5_gg(r,i=md5_gg(i,m=md5_gg(m,f,r,i,d[n+1],5,-165796510),f,r,d[n+6],9,-1069501632),m,f,d[n+11],14,643717713),i,m,d[n+0],20,-373897302),r=md5_gg(r,i=md5_gg(i,m=md5_gg(m,f,r,i,d[n+5],5,-701558691),f,r,d[n+10],9,38016083),m,f,d[n+15],14,-660478335),i,m,d[n+4],20,-405537848),r=md5_gg(r,i=md5_gg(i,m=md5_gg(m,f,r,i,d[n+9],5,568446438),f,r,d[n+14],9,-1019803690),m,f,d[n+3],14,-187363961),i,m,d[n+8],20,1163531501),r=md5_gg(r,i=md5_gg(i,m=md5_gg(m,f,r,i,d[n+13],5,-1444681467),f,r,d[n+2],9,-51403784),m,f,d[n+7],14,1735328473),i,m,d[n+12],20,-1926607734),r=md5_hh(r,i=md5_hh(i,m=md5_hh(m,f,r,i,d[n+5],4,-378558),f,r,d[n+8],11,-2022574463),m,f,d[n+11],16,1839030562),i,m,d[n+14],23,-35309556),r=md5_hh(r,i=md5_hh(i,m=md5_hh(m,f,r,i,d[n+1],4,-1530992060),f,r,d[n+4],11,1272893353),m,f,d[n+7],16,-155497632),i,m,d[n+10],23,-1094730640),r=md5_hh(r,i=md5_hh(i,m=md5_hh(m,f,r,i,d[n+13],4,681279174),f,r,d[n+0],11,-358537222),m,f,d[n+3],16,-722521979),i,m,d[n+6],23,76029189),r=md5_hh(r,i=md5_hh(i,m=md5_hh(m,f,r,i,d[n+9],4,-640364487),f,r,d[n+12],11,-421815835),m,f,d[n+15],16,530742520),i,m,d[n+2],23,-995338651),r=md5_ii(r,i=md5_ii(i,m=md5_ii(m,f,r,i,d[n+0],6,-198630844),f,r,d[n+7],10,1126891415),m,f,d[n+14],15,-1416354905),i,m,d[n+5],21,-57434055),r=md5_ii(r,i=md5_ii(i,m=md5_ii(m,f,r,i,d[n+12],6,1700485571),f,r,d[n+3],10,-1894986606),m,f,d[n+10],15,-1051523),i,m,d[n+1],21,-2054922799),r=md5_ii(r,i=md5_ii(i,m=md5_ii(m,f,r,i,d[n+8],6,1873313359),f,r,d[n+15],10,-30611744),m,f,d[n+6],15,-1560198380),i,m,d[n+13],21,1309151649),r=md5_ii(r,i=md5_ii(i,m=md5_ii(m,f,r,i,d[n+4],6,-145523070),f,r,d[n+11],10,-1120210379),m,f,d[n+2],15,718787259),i,m,d[n+9],21,-343485551),m=safe_add(m,h),f=safe_add(f,t),r=safe_add(r,g),i=safe_add(i,e)}return Array(m,f,r,i)}function md5_cmn(d,_,m,f,r,i){return safe_add(bit_rol(safe_add(safe_add(_,d),safe_add(f,i)),r),m)}function md5_ff(d,_,m,f,r,i,n){return md5_cmn(_&m|~_&f,d,_,r,i,n)}function md5_gg(d,_,m,f,r,i,n){return md5_cmn(_&f|m&~f,d,_,r,i,n)}function md5_hh(d,_,m,f,r,i,n){return md5_cmn(_^m^f,d,_,r,i,n)}function md5_ii(d,_,m,f,r,i,n){return md5_cmn(m^(_|~f),d,_,r,i,n)}function safe_add(d,_){var m=(65535&d)+(65535&_);return(d>>16)+(_>>16)+(m>>16)<<16|65535&m}function bit_rol(d,_){return d<<_|d>>>32-_}
+
+
+function get_hash(data){
+    var result = MD5(data);
+    return result;
+}
+</script>
+<script class="text/javascript" src="jquery.js"></script>
+
+
+<script class="text/javascript" src="jsencrypt.min.js"></script>
+
+<script>
+
+    function digital_sign(hash_str){
+          var encrypt = new JSEncrypt();
+          var privateKey = "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDlOJu6TyygqxfWT7eLtGDwajtNFOb9I5XRb6khyfD1Yt3YiCgQWMNW649887VGJiGr/L5i2osbl8C9+WJTeucF+S76xFxdU6jE0NQ+Z+zEdhUTooNRaY5nZiu5PgDB0ED/ZKBUSLKL7eibMxZtMlUDHjm4gwQco1KRMDSmXSMkDwIDAQAB";
+          encrypt.setPublicKey(privateKey);
+          var encrypted = encrypt.encrypt(hash_str);
+          return encrypted;
+        }
+</script>
+</html>
