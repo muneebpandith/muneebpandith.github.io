@@ -185,7 +185,8 @@
 
 
 <script type="text/javascript">
-var ROOT = "http://127.0.0.1:5000";
+//AWS EC2
+var ROOT = "http://54.212.46.254:5000";
 var API_ROOT = ROOT+"/ELL893/muneeb_majid/smarthome/http";
 
     function update(devId, additional=""){
@@ -198,7 +199,7 @@ var API_ROOT = ROOT+"/ELL893/muneeb_majid/smarthome/http";
             var data =  JSON.stringify({device: devId, params: {color:color, power: power}});
             data = data.replaceAll(":", ": ");
             data = data.replaceAll(",", ", ");
-            alert(get_hash(data));
+            //alert(get_hash(data));
             var hash_str = digital_sign(get_hash(data));
             var payload = JSON.stringify({device: devId, params: {color: color, power: power}, hash: hash_str});
             //alert(payload);
