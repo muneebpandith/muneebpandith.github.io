@@ -1,0 +1,14 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,700);
+
+
+#slider-4 H2 {
+  font-family: 'Lato', sans-serif;
+}
+#social-buttons2-5 .mbr-section-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+}
+#social-buttons2-5 .mbr-section-title B {
+  font-size: 22px;
+}
