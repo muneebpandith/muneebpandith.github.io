@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<!-- saved from url=(0119)file:///C:/Users/Muneeb%20Pandith/Desktop/JavaScript%20Animated%20Typing%20with%20Typed.js%20_%20by%20Matt%20Boldt.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<title>JavaScript Animated Typing with Typed.js | by Matt Boldt</title>
+	<script type="text/javascript" async="" src="./index_files/ga.js.download"></script><script type="text/javascript" async="" src="file:///C:/Users/Muneeb%20Pandith/Desktop/JavaScript%20Animated%20Typing%20with%20Typed.js%20_%20by%20Matt%20Boldt_files/ga.js.download"></script><script src="file:///C:/Users/Muneeb%20Pandith/Desktop/JavaScript%20Animated%20Typing%20with%20Typed.js%20_%20by%20Matt%20Boldt_files/jquery.min.js.download"></script>
+	<script src="file:///C:/Users/Muneeb%20Pandith/Desktop/JavaScript%20Animated%20Typing%20with%20Typed.js%20_%20by%20Matt%20Boldt_files/typed.custom.js.download" type="text/javascript"></script>
+  <link rel="stylesheet" href="file:///C:/Users/Muneeb%20Pandith/Desktop/JavaScript%20Animated%20Typing%20with%20Typed.js%20_%20by%20Matt%20Boldt_files/font-awesome.css">
+  <link rel="stylesheet" href="file:///C:/Users/Muneeb%20Pandith/Desktop/JavaScript%20Animated%20Typing%20with%20Typed.js%20_%20by%20Matt%20Boldt_files/default.min.css">
+  <script src="file:///C:/Users/Muneeb%20Pandith/Desktop/JavaScript%20Animated%20Typing%20with%20Typed.js%20_%20by%20Matt%20Boldt_files/highlight.min.js.download"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+	<script>
+	$(function(){
+
+		$("#typed").typed({
+			strings: ["Typed.js is a JavaScript library.", "It tyops out", "It types out sentences.", "And then deletes them.", "Try it out!"],
+			typeSpeed: 30,
+      callback: function(){
+        shift();
+      }
+		});
+
+	});
+  function shift(){
+      $(".head-wrap").addClass("shift-text");
+      terminalHeight();
+  }
+
+  function terminalHeight(){
+      var termHeight = $(".terminal-height");
+      var value = termHeight.text();
+      value = parseInt(value);
+      setTimeout(function(){
+          if (value > 10){
+              value = value-1;
+              this.txtValue = value.toString();
+              termHeight.text(this.txtValue);
+              self.terminalHeight();
+          }
+          else{
+              clearTimeout();
+          }
+      }, 10);
+  }
+	</script>
+	<link href="file:///C:/Users/Muneeb%20Pandith/Desktop/JavaScript%20Animated%20Typing%20with%20Typed.js%20_%20by%20Matt%20Boldt_files/main.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="header">
+	<div class="head-wrap shift-text">
+		<h1 class="h1">Muneeb Ahmed</h1>
+		<div class="text-editor-wrap">
+			<div class="title-bar"><span class="title">typed.js — bash — 80x<span class="terminal-height">10</span></span></div>
+			<div class="text-body">
+				$ <span id="typed">Try it out!Try it out!</span><span class="typed-cursor">|</span>
+			</div>
+		</div>
+		<span class="tagline">Type your heart out, with Typed.js</span>
+	</div>
+  <div class="wrap">
+    <div class="btn-wrap">
+      <iframe src="./index_files/github-btn.html" allowtransparency="true" frameborder="0" scrolling="0" width="200" height="50"></iframe>
+      <iframe src="./index_files/github-btn(1).html" allowtransparency="true" frameborder="0" scrolling="0" width="300" height="50"></iframe>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+	<div class="btn-wrap">
+		<div class="btn">
+			<a href="https://github.com/mattboldt/typed.js/archive/master.zip"><i class="fa fa-file-zip-o"></i> Download Zip</a>
+		</div>
+		<div class="btn">
+			<a href="https://github.com/mattboldt/typed.js/"><i class="fa fa-github"></i> View on GitHub</a>
+		</div>
+	</div>
+
+	<p class="note">Another demo made with love by <a href="http://www.mattboldt.com/">Matt Boldt</a>.</p>
+
+
+<h2 class="h2">Installation</h2>
+<pre><code class="hljs shell"><span class="hljs-meta"><span class="hljs-meta">
+#</span></span><span class="bash"><span class="bash"> With NPM</span></span>
+npm install typed.js
+<span class="hljs-meta"><span class="hljs-meta">
+#</span></span><span class="bash"><span class="bash"> With Yarn</span></span>
+yarn add typed.js
+<span class="hljs-meta"><span class="hljs-meta">
+#</span></span><span class="bash"><span class="bash"> With Bower</span></span>
+bower install typed.js
+
+</code>
+</pre>
+
+<h2 class="h2">Setup</h2>
+<pre><code class="javascript hljs">
+<span class="hljs-keyword"><span class="hljs-keyword">var</span></span> typed = <span class="hljs-keyword"><span class="hljs-keyword">new</span></span> Typed(<span class="hljs-string"><span class="hljs-string">'.element'</span></span>, {
+  <span class="hljs-attr"><span class="hljs-attr">strings</span></span>: [<span class="hljs-string"><span class="hljs-string">"First sentence."</span></span>, <span class="hljs-string"><span class="hljs-string">"Second sentence."</span></span>],
+  <span class="hljs-attr"><span class="hljs-attr">typeSpeed</span></span>: <span class="hljs-number"><span class="hljs-number">30</span></span>
+});
+
+</code>
+</pre>
+
+<hr>
+
+<h2 class="h2">All the cool kids use Typed.js</h2>
+
+<p>
+  <a href="https://slack.com/" target="_blank">https://slack.com</a><br>
+  <a href="https://envato.com/" target="_blank">https://envato.com</a><br>
+  <a href="https://productmap.co/" target="_blank">https://productmap.co/</a><br>
+  <a href="https://www.typed.com/" target="_blank">https://www.typed.com/</a><br>
+  <a href="https://apeiron.io/" target="_blank">https://apeiron.io/</a><br>
+  <a href="https://git.market/" target="_blank">https://git.market/</a><br>
+  <a href="http://allison.house/404" target="_blank">http://allison.house/404</a><br>
+  <a href="https://www.maxcdn.com/" target="_blank">http://www.maxcdn.com/</a><br>
+  <a href="https://commando.io/" target="_blank">https://commando.io/</a><br>
+  <a href="http://testdouble.com/agency.html" target="_blank">http://testdouble.com/agency.html</a><br>
+  <a href="http://www.stephanemartinw.com/" target="_blank">http://www.stephanemartinw.com/</a><br>
+  <a href="http://www.trelab.fi/en/" target="_blank">http://www.trelab.fi/en/</a><br>
+  <a href="https://jessejohnson.github.io/" target="_blank">http://jessejohnson.github.io/</a><br>
+</p>
+
+<hr>
+
+<h2 class="h2">Are you not entertained?!</h2>
+
+<p>
+  The <a href="https://github.com/mattboldt/typed.js/blob/master/README.md">README on GitHub</a> is going to be very helpful for any other questions, features, or use cases.
+</p>
+
+<hr>
+
+<h2 class="h2">end</h2>
+
+<p>
+
+If you're using this, let me know! I'd love to see it.<br>
+
+It would also be great if you mentioned me or my website somewhere. <a href="http://www.mattboldt.com/">www.mattboldt.com</a></p><br>
+<p></p>
+
+</div>
+
+
+
+
+
+
+</body></html>
